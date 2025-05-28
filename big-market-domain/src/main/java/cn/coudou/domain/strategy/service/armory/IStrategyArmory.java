@@ -5,7 +5,11 @@ package cn.coudou.domain.strategy.service.armory;
  */
 
 public interface IStrategyArmory {
+    /**
+     * 装配策略
+     * @param strategyId
+     * @return
+     */
     boolean assembleLotteryStrategy(Long strategyId);
 
-    Integer getRandomAwardId(Long strategyId);
 }

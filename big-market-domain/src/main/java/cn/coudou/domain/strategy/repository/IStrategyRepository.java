@@ -1,6 +1,8 @@
 package cn.coudou.domain.strategy.repository;
 
 import cn.coudou.domain.strategy.model.entity.StrategyAwardEntity;
+import cn.coudou.domain.strategy.model.entity.StrategyEntity;
+import cn.coudou.domain.strategy.model.entity.StrategyRuleEntity;
 
 import java.util.List;
 import java.util.Map;
@@ -13,9 +15,15 @@ public interface IStrategyRepository {
 
     List<StrategyAwardEntity> queryStrategyAwardList(Long strategyId);
 
-    void storeStrategyAwardSearchRateTable(Long strategyId, int rateRange, Map<Integer, Integer> strategyAwardSearchRateTable);
+    void storeStrategyAwardSearchRateTable(String key, int rateRange, Map<Integer, Integer> strategyAwardSearchRateTable);
 
-    Integer getStrategyAwardAssemble(Long strategyId, int rateKey);
+    Integer getStrategyAwardAssemble(String key, int rateKey);
 
     int getRateRange(Long strategyId);
+
+    int getRateRange(String key);
+
+    StrategyEntity queryStrategyByStrategyId(Long strategyId);
+
+    StrategyRuleEntity queryStrategyRule(Long strategyId, String ruleModel);
 }
