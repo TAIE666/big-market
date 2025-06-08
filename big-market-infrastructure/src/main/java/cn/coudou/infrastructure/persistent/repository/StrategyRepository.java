@@ -3,6 +3,7 @@ package cn.coudou.infrastructure.persistent.repository;
 import cn.coudou.domain.strategy.model.entity.StrategyAwardEntity;
 import cn.coudou.domain.strategy.model.entity.StrategyEntity;
 import cn.coudou.domain.strategy.model.entity.StrategyRuleEntity;
+import cn.coudou.domain.strategy.model.valobj.StrategyAwardRuleModelVO;
 import cn.coudou.domain.strategy.repository.IStrategyRepository;
 import cn.coudou.infrastructure.persistent.dao.IStrategyAwardDao;
 import cn.coudou.infrastructure.persistent.dao.IStrategyDao;
@@ -144,5 +145,15 @@ public class StrategyRepository implements IStrategyRepository {
                 .build();
         redisService.setValue(cacheKey, strategyEntity);
         return strategyEntity;
+    }
+
+    @Override
+    public StrategyAwardRuleModelVO queryStrategyAwardRuleModelVO(Long strategyId, Integer awardId) {
+        StrategyAward strategyAward = new StrategyAward();
+        strategyAward.setStrategyId(strategyId);
+        strategyAward.setAwardId(awardId);
+
+        String ruleModels = strategyAwardDao.queryStrategyAwardRuleModels(strategyAward);
+        return StrategyAwardRuleModelVO.builder().ruleModels(ruleModels).build();
     }
 }

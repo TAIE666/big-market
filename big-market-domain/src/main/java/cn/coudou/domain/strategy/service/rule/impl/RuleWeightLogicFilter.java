@@ -14,10 +14,13 @@ import org.springframework.stereotype.Component;
 import javax.annotation.Resource;
 import java.util.*;
 
+/**
+ * 规则权重过滤
+ */
+
 @Slf4j
 @Component
 @LogicStrategy(logicMode = DefaultLogicFactory.LogicModel.RULE_WIGHT)
-
 public class RuleWeightLogicFilter implements ILogicFilter<RuleActionEntity.RaffleBeforeEntity> {
 @Resource
 private IStrategyRepository repository;
