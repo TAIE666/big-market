@@ -615,3 +615,84 @@
 25-06-08.21:07:04.904 [main            ] INFO  LogicChainTest         - 测试结果：101
 25-06-08.21:07:04.943 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
 25-06-08.21:07:04.962 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-06-10.20:08:14.131 [main            ] INFO  LogicTreeTest          - Starting LogicTreeTest using Java 1.8.0_391 on LAPTOP-RN9B7MCO with PID 29832 (started by 11140 in E:\java\Project\big-market\big-market-app)
+25-06-10.20:08:14.133 [main            ] INFO  LogicTreeTest          - The following 1 profile is active: "dev"
+25-06-10.20:08:15.541 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-06-10.20:08:15.548 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-06-10.20:08:15.663 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 69 ms. Found 0 Redis repository interfaces.
+25-06-10.20:08:18.235 [main            ] INFO  Version                - Redisson 3.23.4
+25-06-10.20:08:19.175 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-06-10.20:08:19.194 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-06-10.20:08:21.456 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-06-10.20:08:21.543 [main            ] INFO  LogicTreeTest          - Started LogicTreeTest in 7.942 seconds (JVM running for 10.138)
+25-06-10.20:08:22.019 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【决策树规则；增加dall-e-3画图模型】treeId:100000001 node:rule_lock code:0000
+25-06-10.20:08:22.020 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【决策树规则；增加dall-e-3画图模型】treeId:100000001 node:rule_stock code:0001
+25-06-10.20:08:22.022 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【决策树规则；增加dall-e-3画图模型】treeId:100000001 node:rule_luck_award code:0001
+25-06-10.20:08:22.217 [main            ] INFO  LogicTreeTest          - 测试结果：{"awardId":101,"awardRuleValue":"1,100"}
+25-06-10.20:11:17.052 [main            ] INFO  LogicTreeTest          - Starting LogicTreeTest using Java 1.8.0_391 on LAPTOP-RN9B7MCO with PID 33024 (started by 11140 in E:\java\Project\big-market\big-market-app)
+25-06-10.20:11:17.053 [main            ] INFO  LogicTreeTest          - The following 1 profile is active: "dev"
+25-06-10.20:11:18.211 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-06-10.20:11:18.214 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-06-10.20:11:18.268 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35 ms. Found 0 Redis repository interfaces.
+25-06-10.20:11:20.764 [main            ] INFO  Version                - Redisson 3.23.4
+25-06-10.20:11:21.673 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-06-10.20:11:21.696 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-06-10.20:11:23.981 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-06-10.20:11:24.082 [main            ] INFO  LogicTreeTest          - Started LogicTreeTest in 7.641 seconds (JVM running for 9.554)
+25-06-10.20:11:24.398 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【决策树规则；增加dall-e-3画图模型】treeId:100000001 node:rule_lock code:0000
+25-06-10.20:11:24.399 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【决策树规则；增加dall-e-3画图模型】treeId:100000001 node:rule_stock code:0001
+25-06-10.20:11:24.400 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【决策树规则；增加dall-e-3画图模型】treeId:100000001 node:rule_luck_award code:0001
+25-06-10.20:11:24.561 [main            ] INFO  LogicTreeTest          - 测试结果：{"awardId":101,"awardRuleValue":"1,100"}
+25-06-10.20:11:33.704 [main            ] INFO  LogicTreeTest          - Starting LogicTreeTest using Java 1.8.0_391 on LAPTOP-RN9B7MCO with PID 32404 (started by 11140 in E:\java\Project\big-market\big-market-app)
+25-06-10.20:11:33.706 [main            ] INFO  LogicTreeTest          - The following 1 profile is active: "dev"
+25-06-10.20:11:35.003 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-06-10.20:11:35.008 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-06-10.20:11:35.077 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 37 ms. Found 0 Redis repository interfaces.
+25-06-10.20:11:37.910 [main            ] INFO  Version                - Redisson 3.23.4
+25-06-10.20:11:38.896 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-06-10.20:11:38.918 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-06-10.20:11:42.133 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-06-10.20:11:42.309 [main            ] INFO  LogicTreeTest          - Started LogicTreeTest in 9.258 seconds (JVM running for 11.346)
+25-06-10.20:16:54.641 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【决策树规则；增加dall-e-3画图模型】treeId:100000001 node:rule_lock code:0000
+25-06-10.20:16:54.642 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【决策树规则；增加dall-e-3画图模型】treeId:100000001 node:rule_stock code:0001
+25-06-10.20:16:54.644 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【决策树规则；增加dall-e-3画图模型】treeId:100000001 node:rule_luck_award code:0001
+25-06-10.20:17:35.732 [main            ] INFO  LogicTreeTest          - Starting LogicTreeTest using Java 1.8.0_391 on LAPTOP-RN9B7MCO with PID 32144 (started by 11140 in E:\java\Project\big-market\big-market-app)
+25-06-10.20:17:35.742 [main            ] INFO  LogicTreeTest          - The following 1 profile is active: "dev"
+25-06-10.20:17:36.854 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-06-10.20:17:36.858 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-06-10.20:17:36.911 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
+25-06-10.20:17:39.349 [main            ] INFO  Version                - Redisson 3.23.4
+25-06-10.20:17:40.257 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-06-10.20:17:40.278 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-06-10.20:17:42.830 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-06-10.20:17:42.927 [main            ] INFO  LogicTreeTest          - Started LogicTreeTest in 7.711 seconds (JVM running for 9.24)
+25-06-10.20:31:11.986 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【决策树规则；增加dall-e-3画图模型】treeId:100000001 node:rule_lock code:0000
+25-06-10.20:31:11.988 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【决策树规则；增加dall-e-3画图模型】treeId:100000001 node:rule_stock code:0001
+25-06-10.20:31:11.992 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【决策树规则；增加dall-e-3画图模型】treeId:100000001 node:rule_luck_award code:0001
+25-06-10.20:31:12.161 [main            ] INFO  LogicTreeTest          - 测试结果：{"awardId":101,"awardRuleValue":"1,100"}
+25-06-10.20:31:18.557 [main            ] INFO  LogicTreeTest          - Starting LogicTreeTest using Java 1.8.0_391 on LAPTOP-RN9B7MCO with PID 32392 (started by 11140 in E:\java\Project\big-market\big-market-app)
+25-06-10.20:31:18.558 [main            ] INFO  LogicTreeTest          - The following 1 profile is active: "dev"
+25-06-10.20:31:19.708 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-06-10.20:31:19.712 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-06-10.20:31:19.758 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 30 ms. Found 0 Redis repository interfaces.
+25-06-10.20:31:21.853 [main            ] INFO  Version                - Redisson 3.23.4
+25-06-10.20:31:22.740 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-06-10.20:31:22.760 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-06-10.20:31:24.978 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-06-10.20:31:25.050 [main            ] INFO  LogicTreeTest          - Started LogicTreeTest in 7.113 seconds (JVM running for 8.839)
+25-06-10.20:43:55.208 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【决策树规则；增加dall-e-3画图模型】treeId:100000001 node:rule_lock code:0000
+25-06-10.20:43:55.211 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【决策树规则；增加dall-e-3画图模型】treeId:100000001 node:rule_stock code:0001
+25-06-10.20:43:55.214 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【决策树规则；增加dall-e-3画图模型】treeId:100000001 node:rule_luck_award code:0001
+25-06-10.20:45:41.130 [main            ] INFO  LogicTreeTest          - Starting LogicTreeTest using Java 1.8.0_391 on LAPTOP-RN9B7MCO with PID 32028 (started by 11140 in E:\java\Project\big-market\big-market-app)
+25-06-10.20:45:41.141 [main            ] INFO  LogicTreeTest          - The following 1 profile is active: "dev"
+25-06-10.20:45:42.208 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-06-10.20:45:42.217 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-06-10.20:45:42.338 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 49 ms. Found 0 Redis repository interfaces.
+25-06-10.20:45:44.793 [main            ] INFO  Version                - Redisson 3.23.4
+25-06-10.20:45:45.765 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-06-10.20:45:45.784 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-06-10.20:45:48.591 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-06-10.20:45:48.733 [main            ] INFO  LogicTreeTest          - Started LogicTreeTest in 8.122 seconds (JVM running for 9.655)
+25-06-10.20:45:49.154 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【决策树规则；增加dall-e-3画图模型】treeId:100000001 node:rule_lock code:0000
+25-06-10.20:46:42.034 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【决策树规则；增加dall-e-3画图模型】treeId:100000001 node:rule_stock code:0001
+25-06-10.20:46:42.037 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【决策树规则；增加dall-e-3画图模型】treeId:100000001 node:rule_luck_award code:0001
