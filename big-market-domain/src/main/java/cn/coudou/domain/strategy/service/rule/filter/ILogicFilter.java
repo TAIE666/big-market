@@ -1,4 +1,4 @@
-package cn.coudou.domain.strategy.service.rule;
+package cn.coudou.domain.strategy.service.rule.filter;
 
 import cn.coudou.domain.strategy.model.entity.RuleActionEntity;
 import cn.coudou.domain.strategy.model.entity.RuleMatterEntity;
