@@ -3,6 +3,7 @@ package cn.coudou.domain.strategy.repository;
 import cn.coudou.domain.strategy.model.entity.StrategyAwardEntity;
 import cn.coudou.domain.strategy.model.entity.StrategyEntity;
 import cn.coudou.domain.strategy.model.entity.StrategyRuleEntity;
+import cn.coudou.domain.strategy.model.valobj.RuleTreeVO;
 import cn.coudou.domain.strategy.model.valobj.StrategyAwardRuleModelVO;
 
 import java.util.List;
@@ -35,4 +36,6 @@ public interface IStrategyRepository {
     StrategyEntity queryStrategyEntityByStrategyId(Long strategyId);
 
     StrategyAwardRuleModelVO queryStrategyAwardRuleModelVO(Long strategyId, Integer awardId);
+
+    RuleTreeVO queryRuleTreeVOByTreeId(String treeId);
 }
