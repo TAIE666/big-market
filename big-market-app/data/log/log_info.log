@@ -22,3 +22,374 @@
 25-06-11.14:18:02.632 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardConfig":"1,100","awardId":101}
 25-06-11.14:18:02.677 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
 25-06-11.14:18:02.696 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-06-11.17:05:17.177 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_391 on LAPTOP-RN9B7MCO with PID 8088 (started by 11140 in E:\java\Project\big-market\big-market-app)
+25-06-11.17:05:17.180 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+25-06-11.17:05:18.823 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-06-11.17:05:18.830 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-06-11.17:05:18.907 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 44 ms. Found 0 Redis repository interfaces.
+25-06-11.17:05:21.547 [main            ] INFO  Version                - Redisson 3.23.4
+25-06-11.17:05:22.564 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-06-11.17:05:22.582 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-06-11.17:05:25.152 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-06-11.17:05:25.282 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 8.675 seconds (JVM running for 10.342)
+25-06-11.17:05:25.852 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+25-06-11.17:05:25.861 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-默认处理 userId: coudou strategyId: 100006 ruleModel: rule_default awardId: 102
+25-06-11.17:05:25.862 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链 coudou 100006 102 rule_default
+25-06-11.17:05:25.891 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-06-11.17:05:27.102 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-06-11.17:05:27.186 [main            ] INFO  RuleLockLogicTreeNode  - 规则过滤-次数锁 userId:coudou strategyId:100006 awardId:102
+25-06-11.17:05:27.187 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_lock code:0000
+25-06-11.17:05:27.187 [main            ] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减 userId:coudou strategyId:100006 awardId:102
+25-06-11.17:05:27.190 [main            ] WARN  RuleStockLogicTreeNode - 规则过滤-库存扣减-告警，库存不足。userId:coudou strategyId:100006 awardId:102
+25-06-11.17:05:27.190 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_stock code:0000
+25-06-11.17:05:27.254 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-06-11.17:05:27.264 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-06-11.17:06:28.891 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_391 on LAPTOP-RN9B7MCO with PID 29504 (started by 11140 in E:\java\Project\big-market\big-market-app)
+25-06-11.17:06:28.893 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+25-06-11.17:06:29.902 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-06-11.17:06:29.905 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-06-11.17:06:29.946 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+25-06-11.17:06:32.311 [main            ] INFO  Version                - Redisson 3.23.4
+25-06-11.17:06:33.252 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-06-11.17:06:33.272 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-06-11.17:06:35.365 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-06-11.17:06:35.635 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 7.205 seconds (JVM running for 8.615)
+25-06-11.17:06:36.064 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+25-06-11.17:06:36.073 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-默认处理 userId: coudou strategyId: 100006 ruleModel: rule_default awardId: 101
+25-06-11.17:06:36.074 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链 coudou 100006 101 rule_default
+25-06-11.17:06:36.106 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-06-11.17:06:37.202 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-06-11.17:06:37.265 [main            ] INFO  RuleLockLogicTreeNode  - 规则过滤-次数锁 userId:coudou strategyId:100006 awardId:101
+25-06-11.17:06:37.266 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_lock code:0000
+25-06-11.17:06:37.267 [main            ] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减 userId:coudou strategyId:100006 awardId:101
+25-06-11.17:06:37.269 [main            ] WARN  RuleStockLogicTreeNode - 规则过滤-库存扣减-告警，库存不足。userId:coudou strategyId:100006 awardId:101
+25-06-11.17:06:37.269 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_stock code:0000
+25-06-11.17:06:37.320 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-06-11.17:06:37.349 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-06-11.17:09:20.216 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_391 on LAPTOP-RN9B7MCO with PID 28792 (started by 11140 in E:\java\Project\big-market\big-market-app)
+25-06-11.17:09:20.217 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+25-06-11.17:09:21.746 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-06-11.17:09:21.751 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-06-11.17:09:21.809 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 37 ms. Found 0 Redis repository interfaces.
+25-06-11.17:09:24.325 [main            ] INFO  Version                - Redisson 3.23.4
+25-06-11.17:09:25.278 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-06-11.17:09:25.297 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-06-11.17:09:27.765 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-06-11.17:09:28.073 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 8.487 seconds (JVM running for 9.917)
+25-06-11.17:09:28.438 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+25-06-11.17:09:28.446 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-默认处理 userId: coudou strategyId: 100006 ruleModel: rule_default awardId: 102
+25-06-11.17:09:28.447 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链 coudou 100006 102 rule_default
+25-06-11.17:09:28.467 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-06-11.17:09:29.569 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-06-11.17:09:29.630 [main            ] INFO  RuleLockLogicTreeNode  - 规则过滤-次数锁 userId:coudou strategyId:100006 awardId:102
+25-06-11.17:09:29.631 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_lock code:0000
+25-06-11.17:09:29.632 [main            ] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减 userId:coudou strategyId:100006 awardId:102
+25-06-11.17:09:29.635 [main            ] WARN  RuleStockLogicTreeNode - 规则过滤-库存扣减-告警，库存不足。userId:coudou strategyId:100006 awardId:102
+25-06-11.17:09:29.635 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_stock code:0000
+25-06-11.17:09:29.682 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-06-11.17:09:29.711 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-06-11.17:13:24.671 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_391 on LAPTOP-RN9B7MCO with PID 28712 (started by 11140 in E:\java\Project\big-market\big-market-app)
+25-06-11.17:13:24.672 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+25-06-11.17:13:25.697 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-06-11.17:13:25.701 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-06-11.17:13:25.749 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 30 ms. Found 0 Redis repository interfaces.
+25-06-11.17:13:28.222 [main            ] INFO  Version                - Redisson 3.23.4
+25-06-11.17:13:29.448 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-06-11.17:13:29.467 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-06-11.17:13:32.539 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-06-11.17:13:32.843 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 8.599 seconds (JVM running for 9.84)
+25-06-11.17:13:33.395 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+25-06-11.17:13:33.402 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-默认处理 userId: coudou strategyId: 100006 ruleModel: rule_default awardId: 102
+25-06-11.17:13:33.403 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链 coudou 100006 102 rule_default
+25-06-11.17:13:33.427 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-06-11.17:13:35.012 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-06-11.17:13:35.025 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-06-11.17:13:35.132 [main            ] INFO  RuleLockLogicTreeNode  - 规则过滤-次数锁 userId:coudou strategyId:100006 awardId:102
+25-06-11.17:13:35.133 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_lock code:0000
+25-06-11.17:13:35.134 [main            ] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减 userId:coudou strategyId:100006 awardId:102
+25-06-11.17:13:35.138 [main            ] WARN  RuleStockLogicTreeNode - 规则过滤-库存扣减-告警，库存不足。userId:coudou strategyId:100006 awardId:102
+25-06-11.17:13:35.138 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_stock code:0000
+25-06-11.17:13:35.222 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-06-11.17:13:35.266 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-06-11.17:16:09.379 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_391 on LAPTOP-RN9B7MCO with PID 24864 (started by 11140 in E:\java\Project\big-market\big-market-app)
+25-06-11.17:16:09.380 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+25-06-11.17:16:10.462 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-06-11.17:16:10.465 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-06-11.17:16:10.512 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27 ms. Found 0 Redis repository interfaces.
+25-06-11.17:16:13.223 [main            ] INFO  Version                - Redisson 3.23.4
+25-06-11.17:16:14.276 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-06-11.17:16:14.297 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-06-11.17:16:16.822 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-06-11.17:16:17.099 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 8.208 seconds (JVM running for 9.767)
+25-06-11.17:16:17.556 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+25-06-11.17:16:17.566 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-默认处理 userId: coudou strategyId: 100006 ruleModel: rule_default awardId: 101
+25-06-11.17:16:17.567 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链 coudou 100006 101 rule_default
+25-06-11.17:16:17.594 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-06-11.17:16:18.814 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-06-11.17:16:18.877 [main            ] INFO  RuleLockLogicTreeNode  - 规则过滤-次数锁 userId:coudou strategyId:100006 awardId:101
+25-06-11.17:16:18.878 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_lock code:0000
+25-06-11.17:16:18.879 [main            ] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减 userId:coudou strategyId:100006 awardId:101
+25-06-11.17:16:18.883 [main            ] WARN  RuleStockLogicTreeNode - 规则过滤-库存扣减-告警，库存不足。userId:coudou strategyId:100006 awardId:101
+25-06-11.17:16:18.883 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_stock code:0000
+25-06-11.17:16:18.932 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-06-11.17:16:18.959 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-06-11.17:17:55.973 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_391 on LAPTOP-RN9B7MCO with PID 16084 (started by 11140 in E:\java\Project\big-market\big-market-app)
+25-06-11.17:17:55.974 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+25-06-11.17:17:57.021 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-06-11.17:17:57.025 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-06-11.17:17:57.062 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
+25-06-11.17:17:59.165 [main            ] INFO  Version                - Redisson 3.23.4
+25-06-11.17:18:00.089 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-06-11.17:18:00.109 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-06-11.17:18:02.534 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-06-11.17:18:02.882 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 7.315 seconds (JVM running for 8.689)
+25-06-11.17:18:03.265 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+25-06-11.17:18:03.273 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-默认处理 userId: coudou strategyId: 100006 ruleModel: rule_default awardId: 102
+25-06-11.17:18:03.274 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链 coudou 100006 102 rule_default
+25-06-11.17:18:03.297 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-06-11.17:18:04.482 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-06-11.17:18:04.544 [main            ] INFO  RuleLockLogicTreeNode  - 规则过滤-次数锁 userId:coudou strategyId:100006 awardId:102
+25-06-11.17:18:04.545 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_lock code:0000
+25-06-11.17:18:04.545 [main            ] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减 userId:coudou strategyId:100006 awardId:102
+25-06-11.17:18:04.549 [main            ] WARN  RuleStockLogicTreeNode - 规则过滤-库存扣减-告警，库存不足。userId:coudou strategyId:100006 awardId:102
+25-06-11.17:18:04.549 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_stock code:0000
+25-06-11.17:18:04.593 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-06-11.17:18:04.624 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-06-11.17:19:42.086 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_391 on LAPTOP-RN9B7MCO with PID 18732 (started by 11140 in E:\java\Project\big-market\big-market-app)
+25-06-11.17:19:42.087 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+25-06-11.17:19:43.526 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-06-11.17:19:43.529 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-06-11.17:19:43.568 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
+25-06-11.17:19:45.918 [main            ] INFO  Version                - Redisson 3.23.4
+25-06-11.17:19:46.931 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-06-11.17:19:46.950 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-06-11.17:19:49.410 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-06-11.17:19:49.699 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 8.067 seconds (JVM running for 9.398)
+25-06-11.17:19:50.011 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-06-11.17:19:50.100 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+25-06-11.17:19:50.110 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-默认处理 userId: coudou strategyId: 100006 ruleModel: rule_default awardId: 102
+25-06-11.17:19:50.111 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链 coudou 100006 102 rule_default
+25-06-11.17:19:50.139 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-06-11.17:19:51.290 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-06-11.17:19:51.352 [main            ] INFO  RuleLockLogicTreeNode  - 规则过滤-次数锁 userId:coudou strategyId:100006 awardId:102
+25-06-11.17:19:51.353 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_lock code:0000
+25-06-11.17:19:51.353 [main            ] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减 userId:coudou strategyId:100006 awardId:102
+25-06-11.17:19:51.357 [main            ] WARN  RuleStockLogicTreeNode - 规则过滤-库存扣减-告警，库存不足。userId:coudou strategyId:100006 awardId:102
+25-06-11.17:19:51.357 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_stock code:0000
+25-06-11.17:19:51.407 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-06-11.17:19:51.434 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-06-11.17:24:40.490 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_391 on LAPTOP-RN9B7MCO with PID 29200 (started by 11140 in E:\java\Project\big-market\big-market-app)
+25-06-11.17:24:40.500 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+25-06-11.17:24:41.702 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-06-11.17:24:41.708 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-06-11.17:24:41.769 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29 ms. Found 0 Redis repository interfaces.
+25-06-11.17:24:44.367 [main            ] INFO  Version                - Redisson 3.23.4
+25-06-11.17:24:45.340 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-06-11.17:24:45.364 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-06-11.17:24:48.744 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-06-11.17:24:48.887 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 8.941 seconds (JVM running for 10.919)
+25-06-11.17:24:49.463 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+25-06-11.17:24:49.474 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-默认处理 userId: coudou strategyId: 100006 ruleModel: rule_default awardId: 102
+25-06-11.17:24:49.475 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链 coudou 100006 102 rule_default
+25-06-11.17:24:49.503 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-06-11.17:24:50.001 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-06-11.17:24:50.813 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-06-11.17:24:50.879 [main            ] INFO  RuleLockLogicTreeNode  - 规则过滤-次数锁 userId:coudou strategyId:100006 awardId:102
+25-06-11.17:24:50.880 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_lock code:0000
+25-06-11.17:24:50.881 [main            ] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减 userId:coudou strategyId:100006 awardId:102
+25-06-11.17:24:50.885 [main            ] WARN  RuleStockLogicTreeNode - 规则过滤-库存扣减-告警，库存不足。userId:coudou strategyId:100006 awardId:102
+25-06-11.17:24:50.885 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_stock code:0000
+25-06-11.17:25:47.514 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-06-11.17:25:47.514 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m26s701ms450µs600ns).
+25-06-11.17:25:47.593 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-06-11.17:25:47.608 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-06-11.17:25:52.230 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_391 on LAPTOP-RN9B7MCO with PID 29348 (started by 11140 in E:\java\Project\big-market\big-market-app)
+25-06-11.17:25:52.232 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+25-06-11.17:25:53.354 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-06-11.17:25:53.359 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-06-11.17:25:53.422 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 31 ms. Found 0 Redis repository interfaces.
+25-06-11.17:25:56.038 [main            ] INFO  Version                - Redisson 3.23.4
+25-06-11.17:25:57.018 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-06-11.17:25:57.058 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-06-11.17:25:59.427 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-06-11.17:25:59.523 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 7.842 seconds (JVM running for 9.395)
+25-06-11.17:26:00.015 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-06-11.17:26:00.067 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+25-06-11.17:26:00.078 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-默认处理 userId: coudou strategyId: 100006 ruleModel: rule_default awardId: 102
+25-06-11.17:26:00.079 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链 coudou 100006 102 rule_default
+25-06-11.17:26:00.108 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-06-11.17:26:01.322 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-06-11.18:29:23.652 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-06-11.18:29:23.654 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h3m52s330ms467µs700ns).
+25-06-11.18:29:23.693 [main            ] INFO  RuleLockLogicTreeNode  - 规则过滤-次数锁 userId:coudou strategyId:100006 awardId:102
+25-06-11.18:29:23.695 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_lock code:0000
+25-06-11.18:29:23.696 [main            ] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减 userId:coudou strategyId:100006 awardId:102
+25-06-11.18:29:23.702 [main            ] WARN  RuleStockLogicTreeNode - 规则过滤-库存扣减-告警，库存不足。userId:coudou strategyId:100006 awardId:102
+25-06-11.18:29:23.702 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_stock code:0000
+25-06-11.18:29:23.793 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-06-11.18:29:23.801 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-06-11.18:29:29.291 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_391 on LAPTOP-RN9B7MCO with PID 29532 (started by 11140 in E:\java\Project\big-market\big-market-app)
+25-06-11.18:29:29.292 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+25-06-11.18:29:30.878 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-06-11.18:29:30.884 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-06-11.18:29:30.939 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29 ms. Found 0 Redis repository interfaces.
+25-06-11.18:29:33.440 [main            ] INFO  Version                - Redisson 3.23.4
+25-06-11.18:29:34.309 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-06-11.18:29:34.330 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-06-11.18:29:37.157 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-06-11.18:29:37.438 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 8.714 seconds (JVM running for 10.24)
+25-06-11.18:29:37.820 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+25-06-11.18:29:37.827 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-默认处理 userId: coudou strategyId: 100006 ruleModel: rule_default awardId: 102
+25-06-11.18:29:37.828 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链 coudou 100006 102 rule_default
+25-06-11.18:29:37.850 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-06-11.18:29:38.845 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-06-11.18:29:38.897 [main            ] INFO  RuleLockLogicTreeNode  - 规则过滤-次数锁 userId:coudou strategyId:100006 awardId:102
+25-06-11.18:29:38.898 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_lock code:0000
+25-06-11.18:29:38.899 [main            ] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减 userId:coudou strategyId:100006 awardId:102
+25-06-11.18:29:38.902 [main            ] WARN  RuleStockLogicTreeNode - 规则过滤-库存扣减-告警，库存不足。userId:coudou strategyId:100006 awardId:102
+25-06-11.18:29:38.902 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_stock code:0000
+25-06-11.18:29:38.941 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-06-11.18:29:38.944 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-06-11.18:29:48.317 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_391 on LAPTOP-RN9B7MCO with PID 7892 (started by 11140 in E:\java\Project\big-market\big-market-app)
+25-06-11.18:29:48.318 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+25-06-11.18:29:49.321 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-06-11.18:29:49.324 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-06-11.18:29:49.372 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 30 ms. Found 0 Redis repository interfaces.
+25-06-11.18:29:51.860 [main            ] INFO  Version                - Redisson 3.23.4
+25-06-11.18:29:52.922 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-06-11.18:29:52.955 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-06-11.18:29:55.256 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-06-11.18:29:55.514 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 7.619 seconds (JVM running for 8.978)
+25-06-11.18:29:55.928 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+25-06-11.18:29:55.937 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-默认处理 userId: coudou strategyId: 100006 ruleModel: rule_default awardId: 102
+25-06-11.18:29:55.938 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链 coudou 100006 102 rule_default
+25-06-11.18:29:55.965 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-06-11.18:29:57.069 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-06-11.18:29:57.135 [main            ] INFO  RuleLockLogicTreeNode  - 规则过滤-次数锁 userId:coudou strategyId:100006 awardId:102
+25-06-11.18:29:57.135 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_lock code:0000
+25-06-11.18:29:57.136 [main            ] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减 userId:coudou strategyId:100006 awardId:102
+25-06-11.18:29:57.140 [main            ] WARN  RuleStockLogicTreeNode - 规则过滤-库存扣减-告警，库存不足。userId:coudou strategyId:100006 awardId:102
+25-06-11.18:29:57.140 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_stock code:0000
+25-06-11.18:29:57.200 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-06-11.18:29:57.217 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-06-11.18:31:42.012 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_391 on LAPTOP-RN9B7MCO with PID 30588 (started by 11140 in E:\java\Project\big-market\big-market-app)
+25-06-11.18:31:42.013 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+25-06-11.18:31:42.937 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-06-11.18:31:42.941 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-06-11.18:31:42.992 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 31 ms. Found 0 Redis repository interfaces.
+25-06-11.18:31:45.526 [main            ] INFO  Version                - Redisson 3.23.4
+25-06-11.18:31:46.892 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-06-11.18:31:46.919 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-06-11.18:31:49.177 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-06-11.18:31:49.452 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 7.908 seconds (JVM running for 9.541)
+25-06-11.18:31:49.872 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-06-11.18:31:50.002 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-06-11.18:31:51.059 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-06-11.18:31:51.162 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+25-06-11.18:31:51.203 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-默认处理 userId: coudou strategyId: 100006 ruleModel: rule_default awardId: 102
+25-06-11.18:31:51.205 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链 coudou 100006 102 rule_default
+25-06-11.18:31:51.236 [main            ] INFO  RuleLockLogicTreeNode  - 规则过滤-次数锁 userId:coudou strategyId:100006 awardId:102
+25-06-11.18:31:51.237 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_lock code:0000
+25-06-11.18:31:51.238 [main            ] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减 userId:coudou strategyId:100006 awardId:102
+25-06-11.18:31:51.242 [main            ] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减-成功 userId:coudou strategyId:100006 awardId:102
+25-06-11.18:31:51.276 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_stock code:0001
+25-06-11.18:31:51.276 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树 coudou 100006 102 
+25-06-11.18:31:51.503 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100006,"userId":"coudou"}
+25-06-11.18:31:51.507 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardConfig":"","awardId":102}
+25-06-11.18:31:51.511 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-默认处理 userId: coudou strategyId: 100006 ruleModel: rule_default awardId: 102
+25-06-11.18:31:51.511 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链 coudou 100006 102 rule_default
+25-06-11.18:31:51.528 [main            ] INFO  RuleLockLogicTreeNode  - 规则过滤-次数锁 userId:coudou strategyId:100006 awardId:102
+25-06-11.18:31:51.531 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_lock code:0000
+25-06-11.18:31:51.531 [main            ] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减 userId:coudou strategyId:100006 awardId:102
+25-06-11.18:31:51.534 [main            ] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减-成功 userId:coudou strategyId:100006 awardId:102
+25-06-11.18:31:51.536 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_stock code:0001
+25-06-11.18:31:51.536 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树 coudou 100006 102 
+25-06-11.18:31:51.536 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100006,"userId":"coudou"}
+25-06-11.18:31:51.536 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardConfig":"","awardId":102}
+25-06-11.18:31:51.541 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-默认处理 userId: coudou strategyId: 100006 ruleModel: rule_default awardId: 101
+25-06-11.18:31:51.541 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链 coudou 100006 101 rule_default
+25-06-11.18:31:51.544 [main            ] INFO  RuleLockLogicTreeNode  - 规则过滤-次数锁 userId:coudou strategyId:100006 awardId:101
+25-06-11.18:31:51.544 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_lock code:0000
+25-06-11.18:31:51.544 [main            ] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减 userId:coudou strategyId:100006 awardId:101
+25-06-11.18:31:51.547 [main            ] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减-成功 userId:coudou strategyId:100006 awardId:101
+25-06-11.18:31:51.549 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_stock code:0001
+25-06-11.18:31:51.549 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树 coudou 100006 101 
+25-06-11.18:31:51.549 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100006,"userId":"coudou"}
+25-06-11.18:31:51.549 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardConfig":"","awardId":101}
+25-06-11.18:31:55.012 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-06-11.18:31:55.015 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存 strategyId:100006 awardId:102
+25-06-11.18:32:00.013 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-06-11.18:32:00.014 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存 strategyId:100006 awardId:102
+25-06-11.18:32:05.005 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-06-11.18:32:05.007 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存 strategyId:100006 awardId:101
+25-06-11.18:32:10.001 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-06-11.18:32:15.012 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-06-11.18:32:20.002 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-06-11.18:32:25.003 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-06-11.18:32:30.008 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-06-11.18:32:35.007 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-06-11.18:32:40.008 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-06-11.18:32:45.013 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-06-11.18:32:50.002 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-06-11.18:32:55.005 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-06-11.18:33:00.001 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-06-11.18:33:05.015 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-06-11.18:33:10.004 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-06-11.18:33:15.006 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-06-11.18:33:20.011 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-06-11.18:33:20.791 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-06-11.18:33:20.815 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-06-11.18:33:24.820 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_391 on LAPTOP-RN9B7MCO with PID 15972 (started by 11140 in E:\java\Project\big-market\big-market-app)
+25-06-11.18:33:24.821 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+25-06-11.18:33:25.913 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-06-11.18:33:25.921 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-06-11.18:33:26.005 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 48 ms. Found 0 Redis repository interfaces.
+25-06-11.18:33:28.208 [main            ] INFO  Version                - Redisson 3.23.4
+25-06-11.18:33:29.171 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-06-11.18:33:29.193 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-06-11.18:33:31.986 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-06-11.18:33:32.352 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 7.934 seconds (JVM running for 9.102)
+25-06-11.18:33:32.853 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+25-06-11.18:33:32.863 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-默认处理 userId: coudou strategyId: 100006 ruleModel: rule_default awardId: 102
+25-06-11.18:33:32.864 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链 coudou 100006 102 rule_default
+25-06-11.18:33:32.903 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-06-11.18:33:34.551 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-06-11.18:33:34.663 [main            ] INFO  RuleLockLogicTreeNode  - 规则过滤-次数锁 userId:coudou strategyId:100006 awardId:102
+25-06-11.18:33:34.665 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_lock code:0000
+25-06-11.18:33:34.666 [main            ] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减 userId:coudou strategyId:100006 awardId:102
+25-06-11.18:33:34.675 [main            ] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减-成功 userId:coudou strategyId:100006 awardId:102
+25-06-11.18:33:34.747 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_stock code:0001
+25-06-11.18:33:34.747 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树 coudou 100006 102 
+25-06-11.18:33:35.013 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-06-11.18:33:35.127 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100006,"userId":"coudou"}
+25-06-11.18:33:35.134 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardConfig":"","awardId":102}
+25-06-11.18:33:35.138 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-默认处理 userId: coudou strategyId: 100006 ruleModel: rule_default awardId: 102
+25-06-11.18:33:35.139 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链 coudou 100006 102 rule_default
+25-06-11.18:33:35.143 [main            ] INFO  RuleLockLogicTreeNode  - 规则过滤-次数锁 userId:coudou strategyId:100006 awardId:102
+25-06-11.18:33:35.147 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_lock code:0000
+25-06-11.18:33:35.147 [main            ] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减 userId:coudou strategyId:100006 awardId:102
+25-06-11.18:33:35.151 [main            ] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减-成功 userId:coudou strategyId:100006 awardId:102
+25-06-11.18:33:35.153 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_stock code:0001
+25-06-11.18:33:35.153 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树 coudou 100006 102 
+25-06-11.18:33:35.153 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100006,"userId":"coudou"}
+25-06-11.18:33:35.153 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardConfig":"","awardId":102}
+25-06-11.18:33:35.157 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-默认处理 userId: coudou strategyId: 100006 ruleModel: rule_default awardId: 102
+25-06-11.18:33:35.158 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链 coudou 100006 102 rule_default
+25-06-11.18:33:35.162 [main            ] INFO  RuleLockLogicTreeNode  - 规则过滤-次数锁 userId:coudou strategyId:100006 awardId:102
+25-06-11.18:33:35.162 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_lock code:0000
+25-06-11.18:33:35.162 [main            ] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减 userId:coudou strategyId:100006 awardId:102
+25-06-11.18:33:35.165 [main            ] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减-成功 userId:coudou strategyId:100006 awardId:102
+25-06-11.18:33:35.167 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_stock code:0001
+25-06-11.18:33:35.168 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树 coudou 100006 102 
+25-06-11.18:33:35.168 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100006,"userId":"coudou"}
+25-06-11.18:33:35.168 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardConfig":"","awardId":102}
+25-06-11.18:33:40.012 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-06-11.18:33:40.014 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存 strategyId:100006 awardId:102
+25-06-11.18:33:45.014 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-06-11.18:33:45.015 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存 strategyId:100006 awardId:102
+25-06-11.18:33:50.014 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-06-11.18:33:50.016 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存 strategyId:100006 awardId:102
+25-06-11.18:33:55.005 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-06-11.18:34:00.013 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-06-11.18:34:01.608 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-06-11.18:34:01.620 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
