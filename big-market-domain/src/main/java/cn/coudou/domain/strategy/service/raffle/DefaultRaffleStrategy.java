@@ -1,10 +1,13 @@
 package cn.coudou.domain.strategy.service.raffle;
 
+import cn.coudou.domain.strategy.model.entity.StrategyAwardEntity;
 import cn.coudou.domain.strategy.model.valobj.RuleTreeVO;
 import cn.coudou.domain.strategy.model.valobj.StrategyAwardRuleModelVO;
 import cn.coudou.domain.strategy.model.valobj.StrategyAwardStockKeyVO;
 import cn.coudou.domain.strategy.repository.IStrategyRepository;
 import cn.coudou.domain.strategy.service.AbstractRaffleStrategy;
+import cn.coudou.domain.strategy.service.IRaffleAward;
+import cn.coudou.domain.strategy.service.IRaffleStock;
 import cn.coudou.domain.strategy.service.armory.IStrategyDispatch;
 import cn.coudou.domain.strategy.service.rule.chain.ILogicChain;
 import cn.coudou.domain.strategy.service.rule.chain.factory.DefaultChainFactory;
@@ -13,9 +16,11 @@ import cn.coudou.domain.strategy.service.rule.tree.factory.engine.IDecisionTreeE
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Slf4j
 @Service
-public class DefaultRaffleStrategy extends AbstractRaffleStrategy {
+public class DefaultRaffleStrategy extends AbstractRaffleStrategy implements IRaffleAward, IRaffleStock {
 
     public DefaultRaffleStrategy(IStrategyRepository repository, IStrategyDispatch strategyDispatch, DefaultChainFactory defaultChainFactory, DefaultTreeFactory defaultTreeFactory) {
         super(repository, strategyDispatch, defaultChainFactory, defaultTreeFactory);
@@ -54,4 +59,8 @@ public class DefaultRaffleStrategy extends AbstractRaffleStrategy {
         repository.updateStrategyAwardStock(strategyId, awardId);
     }
 
+    @Override
+    public List<StrategyAwardEntity> queryRaffleStrategyAwardList(Long strategyId) {
+        return repository.queryStrategyAwardList(strategyId);
+    }
 }
