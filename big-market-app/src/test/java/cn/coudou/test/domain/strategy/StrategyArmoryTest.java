@@ -1,4 +1,4 @@
-package cn.coudou.test.domain;
+package cn.coudou.test.domain.strategy;
 
 import cn.coudou.domain.strategy.service.armory.IStrategyArmory;
 import cn.coudou.domain.strategy.service.armory.IStrategyDispatch;

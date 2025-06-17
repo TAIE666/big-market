@@ -1,4 +1,4 @@
-package cn.coudou.test.domain;
+package cn.coudou.test.domain.strategy;
 
 import cn.coudou.domain.strategy.model.valobj.*;
 import cn.coudou.domain.strategy.service.rule.tree.factory.engine.IDecisionTreeEngine;

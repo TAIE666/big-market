@@ -928,3 +928,6 @@ Caused by: java.lang.IllegalArgumentException: Result Maps collection already co
 	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:246)
 	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:119)
 	... 118 common frames omitted
+25-06-17.16:02:44.390 [Retail_HikariCP housekeeper] WARN  HikariPool             - Retail_HikariCP - Thread starvation or clock leap detected (housekeeper delta=1m56s826ms448µs900ns).
+25-06-17.16:03:28.361 [Retail_HikariCP housekeeper] WARN  HikariPool             - Retail_HikariCP - Thread starvation or clock leap detected (housekeeper delta=56s640ms313µs600ns).
+25-06-17.16:14:25.491 [Retail_HikariCP housekeeper] WARN  HikariPool             - Retail_HikariCP - Thread starvation or clock leap detected (housekeeper delta=10m17s370ms643µs700ns).

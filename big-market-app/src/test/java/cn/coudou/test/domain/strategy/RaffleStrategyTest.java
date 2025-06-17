@@ -1,4 +1,4 @@
-package cn.coudou.test.domain;
+package cn.coudou.test.domain.strategy;
 
 import cn.coudou.domain.strategy.model.entity.RaffleAwardEntity;
 import cn.coudou.domain.strategy.model.entity.RaffleFactorEntity;
