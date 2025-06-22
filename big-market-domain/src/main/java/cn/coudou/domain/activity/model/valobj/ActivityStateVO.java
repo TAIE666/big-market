@@ -19,3 +19,4 @@ public enum ActivityStateVO {
     private final String desc;
 
 }
+

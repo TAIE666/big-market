@@ -2,6 +2,7 @@ package cn.coudou.domain.activity.service;
 
 import cn.coudou.domain.activity.model.entity.ActivityOrderEntity;
 import cn.coudou.domain.activity.model.entity.ActivityShopCartEntity;
+import cn.coudou.domain.activity.model.entity.SkuRechargeEntity;
 
 /**
  * 抽奖活动订单接口
@@ -10,10 +11,9 @@ import cn.coudou.domain.activity.model.entity.ActivityShopCartEntity;
 public interface IRaffleOrder {
 
     /**
-     * 创建活动订单方法
-     * @param activityShopCartEntity
+     * 创建sku充值订单
+     * @param skuRechargeEntity
      * @return
      */
-
-    ActivityOrderEntity createRaffleActivityOrder(ActivityShopCartEntity activityShopCartEntity);
+    String createSkuRechargeOrder(SkuRechargeEntity skuRechargeEntity);
 }
