@@ -1,5 +1,6 @@
 package cn.coudou.infrastructure.persistent.dao;
 
+import cn.coudou.infrastructure.persistent.po.RaffleActivityAccount;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
@@ -7,4 +8,8 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface IRaffleActivityAccountDao {
+    void insert(RaffleActivityAccount raffleActivityAccount);
+
+    int updateAccountQuota(RaffleActivityAccount raffleActivityAccount);
+
 }
