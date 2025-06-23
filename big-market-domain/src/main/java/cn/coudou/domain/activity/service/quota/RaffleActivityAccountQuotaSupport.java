@@ -1,22 +1,22 @@
-package cn.coudou.domain.activity.service;
+package cn.coudou.domain.activity.service.quota;
 
 import cn.coudou.domain.activity.model.entity.ActivityCountEntity;
 import cn.coudou.domain.activity.model.entity.ActivityEntity;
 import cn.coudou.domain.activity.model.entity.ActivitySkuEntity;
 import cn.coudou.domain.activity.repository.IActivityRepository;
-import cn.coudou.domain.activity.service.rule.factory.DefaultActivityChainFactory;
+import cn.coudou.domain.activity.service.quota.rule.factory.DefaultActivityChainFactory;
 
 /**
  * 抽奖活动的支撑类
  */
 
-public class RaffleActivitySupport {
+public class RaffleActivityAccountQuotaSupport {
 
     protected DefaultActivityChainFactory defaultActivityChainFactory;
 
     protected IActivityRepository activityRepository;
 
-    public RaffleActivitySupport(IActivityRepository activityRepository, DefaultActivityChainFactory defaultActivityChainFactory) {
+    public RaffleActivityAccountQuotaSupport(IActivityRepository activityRepository, DefaultActivityChainFactory defaultActivityChainFactory) {
         this.activityRepository = activityRepository;
         this.defaultActivityChainFactory = defaultActivityChainFactory;
     }

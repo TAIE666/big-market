@@ -1,4 +1,4 @@
-package cn.coudou.domain.activity.service.rule.impl;
+package cn.coudou.domain.activity.service.quota.rule.impl;
 
 import cn.coudou.domain.activity.model.entity.ActivityCountEntity;
 import cn.coudou.domain.activity.model.entity.ActivityEntity;
@@ -6,7 +6,7 @@ import cn.coudou.domain.activity.model.entity.ActivitySkuEntity;
 import cn.coudou.domain.activity.model.valobj.ActivitySkuStockKeyVO;
 import cn.coudou.domain.activity.repository.IActivityRepository;
 import cn.coudou.domain.activity.service.armory.IActivityDispatch;
-import cn.coudou.domain.activity.service.rule.AbstractActionChain;
+import cn.coudou.domain.activity.service.quota.rule.AbstractActionChain;
 import cn.coudou.types.enums.ResponseCode;
 import cn.coudou.types.exception.AppException;
 import lombok.extern.slf4j.Slf4j;

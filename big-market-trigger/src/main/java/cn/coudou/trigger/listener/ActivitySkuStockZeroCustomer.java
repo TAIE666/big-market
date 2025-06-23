@@ -1,6 +1,6 @@
 package cn.coudou.trigger.listener;
 
-import cn.coudou.domain.activity.service.ISkuStock;
+import cn.coudou.domain.activity.service.IRaffleActivitySkuStockService;
 import cn.coudou.types.event.BaseEvent;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;
@@ -24,7 +24,7 @@ public class ActivitySkuStockZeroCustomer {
     private String topic;
 
     @Resource
-    private ISkuStock skuStock;
+    private IRaffleActivitySkuStockService skuStock;
 
     @RabbitListener(queuesToDeclare = @Queue(value = "activity_sku_stock_zero"))
     public void listener(String message) {

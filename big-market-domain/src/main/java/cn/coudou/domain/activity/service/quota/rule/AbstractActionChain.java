@@ -1,8 +1,4 @@
-package cn.coudou.domain.activity.service.rule;
-
-import cn.coudou.domain.activity.model.entity.ActivityCountEntity;
-import cn.coudou.domain.activity.model.entity.ActivityEntity;
-import cn.coudou.domain.activity.model.entity.ActivitySkuEntity;
+package cn.coudou.domain.activity.service.quota.rule;
 
 /**
  * 单规则责任链抽象类

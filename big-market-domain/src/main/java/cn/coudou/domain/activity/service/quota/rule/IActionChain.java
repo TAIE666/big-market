@@ -1,4 +1,4 @@
-package cn.coudou.domain.activity.service.rule;
+package cn.coudou.domain.activity.service.quota.rule;
 
 import cn.coudou.domain.activity.model.entity.ActivityCountEntity;
 import cn.coudou.domain.activity.model.entity.ActivityEntity;

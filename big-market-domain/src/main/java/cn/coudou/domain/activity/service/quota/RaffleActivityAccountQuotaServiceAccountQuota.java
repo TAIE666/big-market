@@ -1,11 +1,12 @@
-package cn.coudou.domain.activity.service;
+package cn.coudou.domain.activity.service.quota;
 
-import cn.coudou.domain.activity.model.aggregate.CreateOrderAggregate;
+import cn.coudou.domain.activity.model.aggregate.CreateQuotaOrderAggregate;
 import cn.coudou.domain.activity.model.entity.*;
 import cn.coudou.domain.activity.model.valobj.ActivitySkuStockKeyVO;
 import cn.coudou.domain.activity.model.valobj.OrderStateVO;
 import cn.coudou.domain.activity.repository.IActivityRepository;
-import cn.coudou.domain.activity.service.rule.factory.DefaultActivityChainFactory;
+import cn.coudou.domain.activity.service.IRaffleActivitySkuStockService;
+import cn.coudou.domain.activity.service.quota.rule.factory.DefaultActivityChainFactory;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.stereotype.Service;
 
@@ -15,14 +16,14 @@ import java.util.Date;
  * 抽奖活动服务
  */
 @Service
-public class RaffleActivityService extends AbstractRaffleActivity implements ISkuStock {
+public class RaffleActivityAccountQuotaServiceAccountQuota extends AbstractRaffleActivityAccountQuotaAccountQuota implements IRaffleActivitySkuStockService {
 
-    public RaffleActivityService(IActivityRepository activityRepository, DefaultActivityChainFactory defaultActivityChainFactory) {
+    public RaffleActivityAccountQuotaServiceAccountQuota(IActivityRepository activityRepository, DefaultActivityChainFactory defaultActivityChainFactory) {
         super(activityRepository, defaultActivityChainFactory);
     }
 
     @Override
-    protected CreateOrderAggregate buildOrderAggregate(SkuRechargeEntity skuRechargeEntity, ActivitySkuEntity activitySkuEntity, ActivityEntity activityEntity, ActivityCountEntity activityCountEntity) {
+    protected CreateQuotaOrderAggregate buildOrderAggregate(SkuRechargeEntity skuRechargeEntity, ActivitySkuEntity activitySkuEntity, ActivityEntity activityEntity, ActivityCountEntity activityCountEntity) {
         ActivityOrderEntity activityOrderEntity = new ActivityOrderEntity();
         activityOrderEntity.setUserId(skuRechargeEntity.getUserId());
         activityOrderEntity.setSku(skuRechargeEntity.getSku());
@@ -39,7 +40,7 @@ public class RaffleActivityService extends AbstractRaffleActivity implements ISk
         activityOrderEntity.setOutBusinessNo(skuRechargeEntity.getOutBusinessNo());
 
         // 构建聚合对象
-        return CreateOrderAggregate.builder()
+        return CreateQuotaOrderAggregate.builder()
                 .userId(skuRechargeEntity.getUserId())
                 .activityId(activitySkuEntity.getActivityId())
                 .totalCount(activityCountEntity.getTotalCount())
@@ -50,9 +51,9 @@ public class RaffleActivityService extends AbstractRaffleActivity implements ISk
     }
 
     @Override
-    protected void doSaveOrder(CreateOrderAggregate createOrderAggregate) {
+    protected void doSaveOrder(CreateQuotaOrderAggregate createQuotaOrderAggregate) {
 
-        activityRepository.doSaveOrder(createOrderAggregate);
+        activityRepository.doSaveOrder(createQuotaOrderAggregate);
     }
 
     @Override
