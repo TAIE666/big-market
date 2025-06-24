@@ -265,7 +265,6 @@ public class ActivityRepository implements IActivityRepository {
                         throw new AppException(ResponseCode.ACCOUNT_QUOTA_ERROR.getCode(), ResponseCode.ACCOUNT_QUOTA_ERROR.getInfo());
                     }
 
-
                     // 创建或更新月账户，true - 存在则更新，false - 不存在则插入
                     if (createPartakeOrderAggregate.isExistAccountMonth()) {
                         int updateMonthCount = raffleActivityAccountMonthDao.updateActivityAccountMonthSubtractionQuota(
@@ -296,7 +295,7 @@ public class ActivityRepository implements IActivityRepository {
                                 .build());
                     }
 
-                    // 3. 创建或更新日账户，true - 存在则更新，false - 不存在则插入
+                    // 创建或更新日账户，true - 存在则更新，false - 不存在则插入
                     if (createPartakeOrderAggregate.isExistAccountDay()) {
                         int updateDayCount = raffleActivityAccountDayDao.updateActivityAccountDaySubtractionQuota(RaffleActivityAccountDay.builder()
                                 .userId(userId)
