@@ -2,8 +2,8 @@ package cn.coudou.trigger.api;
 
 import cn.coudou.trigger.api.dto.RaffleAwardListRequestDTO;
 import cn.coudou.trigger.api.dto.RaffleAwardListResponseDTO;
-import cn.coudou.trigger.api.dto.RaffleRequestDTO;
-import cn.coudou.trigger.api.dto.RaffleResponseDTO;
+import cn.coudou.trigger.api.dto.RaffleStrategyRequestDTO;
+import cn.coudou.trigger.api.dto.RaffleStrategyResponseDTO;
 import cn.coudou.types.model.Response;
 
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.List;
  * 抽奖服务接口
  */
 
-public interface IRaffleService {
+public interface IRaffleStrategyService {
 
     /**
      * 策略装配接口
@@ -33,5 +33,5 @@ public interface IRaffleService {
      * @param requestDTO
      * @return
      */
-    Response<RaffleResponseDTO> randomRaffle(RaffleRequestDTO requestDTO);
+    Response<RaffleStrategyResponseDTO> randomRaffle(RaffleStrategyRequestDTO requestDTO);
 }

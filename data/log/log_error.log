@@ -1,4 +1,4 @@
-25-06-12.16:45:06.789 [http-nio-8091-exec-5] WARN  DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public cn.coudou.types.model.Response<java.util.List<cn.coudou.trigger.api.dto.RaffleAwardListResponseDTO>> cn.coudou.trigger.http.RaffleController.queryRaffleAwardList(cn.coudou.trigger.api.dto.RaffleAwardListRequestDTO)]
+25-06-12.16:45:06.789 [http-nio-8091-exec-5] WARN  DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public cn.coudou.types.model.Response<java.util.List<cn.coudou.trigger.api.dto.RaffleAwardListResponseDTO>> cn.coudou.trigger.http.RaffleStrategyController.queryRaffleAwardList(cn.coudou.trigger.api.dto.RaffleAwardListRequestDTO)]
 25-06-12.16:47:12.032 [http-nio-8091-exec-3] WARN  DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'text/plain;charset=UTF-8' not supported]
 25-06-12.16:47:18.638 [http-nio-8091-exec-4] WARN  DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'text/plain;charset=UTF-8' not supported]
 25-06-12.16:47:29.587 [http-nio-8091-exec-5] WARN  DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'text/plain;charset=UTF-8' not supported]
@@ -8,7 +8,7 @@ java.lang.RuntimeException: 决策树引擎，nextNode 计算失败，未找到�
 	at cn.coudou.domain.strategy.service.rule.tree.factory.engine.impl.DecisionTreeEngine.process(DecisionTreeEngine.java:51)
 	at cn.coudou.domain.strategy.service.raffle.DefaultRaffleStrategy.raffleLogicTree(DefaultRaffleStrategy.java:49)
 	at cn.coudou.domain.strategy.service.AbstractRaffleStrategy.performRaffle(AbstractRaffleStrategy.java:55)
-	at cn.coudou.trigger.http.RaffleController.randomRaffle(RaffleController.java:103)
+	at cn.coudou.trigger.http.RaffleStrategyController.randomRaffle(RaffleController.java:103)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -69,7 +69,7 @@ java.lang.RuntimeException: 决策树引擎，nextNode 计算失败，未找到�
 	at cn.coudou.domain.strategy.service.rule.tree.factory.engine.impl.DecisionTreeEngine.process(DecisionTreeEngine.java:51)
 	at cn.coudou.domain.strategy.service.raffle.DefaultRaffleStrategy.raffleLogicTree(DefaultRaffleStrategy.java:49)
 	at cn.coudou.domain.strategy.service.AbstractRaffleStrategy.performRaffle(AbstractRaffleStrategy.java:55)
-	at cn.coudou.trigger.http.RaffleController.randomRaffle(RaffleController.java:103)
+	at cn.coudou.trigger.http.RaffleStrategyController.randomRaffle(RaffleController.java:103)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -130,7 +130,7 @@ java.lang.RuntimeException: 决策树引擎，nextNode 计算失败，未找到�
 	at cn.coudou.domain.strategy.service.rule.tree.factory.engine.impl.DecisionTreeEngine.process(DecisionTreeEngine.java:51)
 	at cn.coudou.domain.strategy.service.raffle.DefaultRaffleStrategy.raffleLogicTree(DefaultRaffleStrategy.java:49)
 	at cn.coudou.domain.strategy.service.AbstractRaffleStrategy.performRaffle(AbstractRaffleStrategy.java:55)
-	at cn.coudou.trigger.http.RaffleController.randomRaffle(RaffleController.java:103)
+	at cn.coudou.trigger.http.RaffleStrategyController.randomRaffle(RaffleController.java:103)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -201,7 +201,7 @@ java.lang.NullPointerException: null
 	at cn.coudou.domain.strategy.service.rule.chain.factory.DefaultChainFactory.openLogicChain(DefaultChainFactory.java:27)
 	at cn.coudou.domain.strategy.service.raffle.DefaultRaffleStrategy.raffleLogicChain(DefaultRaffleStrategy.java:31)
 	at cn.coudou.domain.strategy.service.AbstractRaffleStrategy.performRaffle(AbstractRaffleStrategy.java:48)
-	at cn.coudou.trigger.http.RaffleController.randomRaffle(RaffleController.java:103)
+	at cn.coudou.trigger.http.RaffleStrategyController.randomRaffle(RaffleController.java:103)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -272,7 +272,7 @@ java.lang.NullPointerException: null
 	at cn.coudou.domain.strategy.service.rule.chain.factory.DefaultChainFactory.openLogicChain(DefaultChainFactory.java:27)
 	at cn.coudou.domain.strategy.service.raffle.DefaultRaffleStrategy.raffleLogicChain(DefaultRaffleStrategy.java:31)
 	at cn.coudou.domain.strategy.service.AbstractRaffleStrategy.performRaffle(AbstractRaffleStrategy.java:48)
-	at cn.coudou.trigger.http.RaffleController.randomRaffle(RaffleController.java:103)
+	at cn.coudou.trigger.http.RaffleStrategyController.randomRaffle(RaffleController.java:103)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
