@@ -17,5 +17,7 @@ public interface IRaffleAward {
      */
     List<StrategyAwardEntity> queryRaffleStrategyAwardList(Long strategyId);
 
+    List<StrategyAwardEntity> queryRaffleStrategyAwardListByActivityId(Long activityId);
+
 }
 
