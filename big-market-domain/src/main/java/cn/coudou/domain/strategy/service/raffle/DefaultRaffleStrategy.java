@@ -2,6 +2,7 @@ package cn.coudou.domain.strategy.service.raffle;
 
 import cn.coudou.domain.strategy.model.entity.StrategyAwardEntity;
 import cn.coudou.domain.strategy.model.valobj.RuleTreeVO;
+import cn.coudou.domain.strategy.model.valobj.RuleWeightVO;
 import cn.coudou.domain.strategy.model.valobj.StrategyAwardRuleModelVO;
 import cn.coudou.domain.strategy.model.valobj.StrategyAwardStockKeyVO;
 import cn.coudou.domain.strategy.repository.IStrategyRepository;
@@ -78,6 +79,17 @@ public class DefaultRaffleStrategy extends AbstractRaffleStrategy implements IRa
     @Override
     public Map<String, Integer> queryAwardRuleLockCount(String[] treeIds) {
         return repository.queryAwardRuleLockCount(treeIds);
+    }
+
+    @Override
+    public List<RuleWeightVO> queryAwardRuleWeight(Long strategyId) {
+        return repository.queryAwardRuleWeight(strategyId);
+    }
+
+    @Override
+    public List<RuleWeightVO> queryAwardRuleWeightByActivityId(Long activityId) {
+        Long strategyId = repository.queryStrategyIdByActivityId(activityId);
+        return queryAwardRuleWeight(strategyId);
     }
 
 }

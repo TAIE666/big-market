@@ -1,6 +1,7 @@
 package cn.coudou.domain.rebate.repository;
 
 import cn.coudou.domain.rebate.model.aggregate.BehaviorRebateAggregate;
+import cn.coudou.domain.rebate.model.entity.BehaviorRebateOrderEntity;
 import cn.coudou.domain.rebate.model.valobj.BehaviorTypeVO;
 import cn.coudou.domain.rebate.model.valobj.DailyBehaviorRebateVO;
 
@@ -14,4 +15,6 @@ public interface IBehaviorRebateRepository {
     List<DailyBehaviorRebateVO> queryDailyBehaviorRebateConfig(BehaviorTypeVO behaviorTypeVO);
 
     void saveUserRebateRecord(String userId, List<BehaviorRebateAggregate> behaviorRebateAggregates);
+
+    List<BehaviorRebateOrderEntity> queryOrderByOutBusinessNo(String userId, String outBusinessNo);
 }

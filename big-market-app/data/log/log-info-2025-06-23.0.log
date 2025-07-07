@@ -85,7 +85,7 @@ org.springframework.dao.DuplicateKeyException:
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
 	at cn.coudou.infrastructure.persistent.repository.ActivityRepository$$EnhancerBySpringCGLIB$$fb134214.doSaveOrder(<generated>)
-	at cn.coudou.domain.activity.service.quota.RaffleActivityAccountQuotaServiceAccountQuota.doSaveOrder(RaffleActivityService.java:54)
+	at cn.coudou.domain.activity.service.quota.RaffleActivityAccountQuotaService.doSaveOrder(RaffleActivityService.java:54)
 	at cn.coudou.domain.activity.service.quota.AbstractRaffleActivityAccountQuotaAccountQuota.createSkuRechargeOrder(AbstractRaffleActivity.java:61)
 	at cn.coudou.test.domain.activity.RaffleActivityAccountQuotaServiceTest.test_createSkuRechargeOrder(RaffleOrderTest.java:31)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -304,7 +304,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Parameter 0 of constructor in cn.coudou.domain.activity.service.quota.RaffleActivityAccountQuotaServiceAccountQuota required a bean of type 'cn.coudou.infrastructure.persistent.dao.IRaffleActivityAccountMonthDao' that could not be found.
+Parameter 0 of constructor in cn.coudou.domain.activity.service.quota.RaffleActivityAccountQuotaService required a bean of type 'cn.coudou.infrastructure.persistent.dao.IRaffleActivityAccountMonthDao' that could not be found.
 
 
 Action:
@@ -427,7 +427,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Parameter 0 of constructor in cn.coudou.domain.activity.service.quota.RaffleActivityAccountQuotaServiceAccountQuota required a bean of type 'cn.coudou.infrastructure.persistent.dao.IRaffleActivityAccountMonthDao' that could not be found.
+Parameter 0 of constructor in cn.coudou.domain.activity.service.quota.RaffleActivityAccountQuotaService required a bean of type 'cn.coudou.infrastructure.persistent.dao.IRaffleActivityAccountMonthDao' that could not be found.
 
 
 Action:
