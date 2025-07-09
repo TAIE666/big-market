@@ -1,5 +1,6 @@
 package cn.coudou.domain.award.service;
 
+import cn.coudou.domain.award.model.entity.DistributeAwardEntity;
 import cn.coudou.domain.award.model.entity.UserAwardRecordEntity;
 
 /**
@@ -9,4 +10,6 @@ import cn.coudou.domain.award.model.entity.UserAwardRecordEntity;
 public interface IAwardService {
 
     void saveUserAwardRecord(UserAwardRecordEntity userAwardRecordEntity);
+
+    void distributeAward(DistributeAwardEntity distributeAwardEntity);
 }
