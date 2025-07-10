@@ -31,11 +31,11 @@ public class BehaviorRebateService implements IBehaviorRebateService {
 
     @Override
     public List<String> createOrder(BehaviorEntity behaviorEntity) {
-        // 查询返利配置
+        // 1. 查询返利配置
         List<DailyBehaviorRebateVO> dailyBehaviorRebateVOS = behaviorRebateRepository.queryDailyBehaviorRebateConfig(behaviorEntity.getBehaviorTypeVO());
-        if (dailyBehaviorRebateVOS == null || dailyBehaviorRebateVOS.isEmpty()) return new ArrayList<>();
+        if (null == dailyBehaviorRebateVOS || dailyBehaviorRebateVOS.isEmpty()) return new ArrayList<>();
 
-        // 构建聚合对象
+        // 2. 构建聚合对象
         List<String> orderIds = new ArrayList<>();
         List<BehaviorRebateAggregate> behaviorRebateAggregates = new ArrayList<>();
         for (DailyBehaviorRebateVO dailyBehaviorRebateVO : dailyBehaviorRebateVOS) {
@@ -61,7 +61,7 @@ public class BehaviorRebateService implements IBehaviorRebateService {
                     .bizId(bizId)
                     .build();
 
-            // 构建事件信息
+            // 构建事件消息
             BaseEvent.EventMessage<SendRebateMessageEvent.RebateMessage> rebateMessageEventMessage = sendRebateMessageEvent.buildEventMessage(rebateMessage);
 
             // 组装任务对象
@@ -81,11 +81,11 @@ public class BehaviorRebateService implements IBehaviorRebateService {
             behaviorRebateAggregates.add(behaviorRebateAggregate);
         }
 
-        // 存储集合对象数据
+        // 3. 存储聚合对象数据
         behaviorRebateRepository.saveUserRebateRecord(behaviorEntity.getUserId(), behaviorRebateAggregates);
 
-        // 返回订单id集合
-        return  orderIds;
+        // 4. 返回订单ID集合
+        return orderIds;
     }
 
     @Override

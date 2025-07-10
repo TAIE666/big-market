@@ -27,13 +27,14 @@ public class UserCreditRandomAward implements IDistributeAward {
 
     @Override
     public void giveOutPrizes(DistributeAwardEntity distributeAwardEntity) {
-        // 奖品id
+        // 奖品ID
         Integer awardId = distributeAwardEntity.getAwardId();
-        // 查询奖品配置
+        // 查询奖品ID 「优先走透传的随机积分奖品配置」
         String awardConfig = distributeAwardEntity.getAwardConfig();
         if (StringUtils.isBlank(awardConfig)) {
             awardConfig = repository.queryAwardConfig(awardId);
         }
+
         String[] creditRange = awardConfig.split(Constants.SPLIT);
         if (creditRange.length != 2) {
             throw new RuntimeException("award_config 「" + awardConfig + "」配置不是一个范围值，如 1,100");
@@ -59,7 +60,6 @@ public class UserCreditRandomAward implements IDistributeAward {
 
         // 存储发奖对象
         repository.saveGiveOutPrizesAggregate(giveOutPrizesAggregate);
-
     }
 
     private BigDecimal generateRandom(BigDecimal min, BigDecimal max) {

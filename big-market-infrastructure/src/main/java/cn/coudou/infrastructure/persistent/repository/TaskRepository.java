@@ -24,7 +24,6 @@ public class TaskRepository implements ITaskRepository {
     @Resource
     private EventPublisher eventPublisher;
 
-
     @Override
     public List<TaskEntity> queryNoSendMessageTaskList() {
         List<Task> tasks = taskDao.queryNoSendMessageTaskList();

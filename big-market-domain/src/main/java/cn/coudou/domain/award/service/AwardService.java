@@ -38,8 +38,10 @@ public class AwardService implements IAwardService {
         // 构建消息对象
         SendAwardMessageEvent.SendAwardMessage sendAwardMessage = new SendAwardMessageEvent.SendAwardMessage();
         sendAwardMessage.setUserId(userAwardRecordEntity.getUserId());
+        sendAwardMessage.setOrderId(userAwardRecordEntity.getOrderId());
         sendAwardMessage.setAwardId(userAwardRecordEntity.getAwardId());
         sendAwardMessage.setAwardTitle(userAwardRecordEntity.getAwardTitle());
+        sendAwardMessage.setAwardConfig(userAwardRecordEntity.getAwardConfig());
 
         BaseEvent.EventMessage<SendAwardMessageEvent.SendAwardMessage> sendAwardMessageEventMessage = sendAwardMessageEvent.buildEventMessage(sendAwardMessage);
 
@@ -59,6 +61,7 @@ public class AwardService implements IAwardService {
 
         // 存储聚合对象 - 一个事务下，用户的中奖记录
         awardRepository.saveUserAwardRecord(userAwardRecordAggregate);
+        log.info("中奖记录保存完成 userId:{} orderId:{}", userAwardRecordEntity.getUserId(), userAwardRecordEntity.getOrderId());
     }
 
     @Override

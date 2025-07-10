@@ -14,23 +14,27 @@ import cn.coudou.infrastructure.persistent.po.Task;
 import cn.coudou.infrastructure.persistent.po.UserAwardRecord;
 import cn.coudou.infrastructure.persistent.po.UserCreditAccount;
 import cn.coudou.infrastructure.persistent.po.UserRaffleOrder;
+import cn.coudou.infrastructure.persistent.redis.IRedisService;
+import cn.coudou.types.common.Constants;
 import cn.coudou.types.enums.ResponseCode;
 import cn.coudou.types.exception.AppException;
 import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
+import org.redisson.api.RLock;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.support.TransactionTemplate;
 
 import javax.annotation.Resource;
+import java.util.concurrent.TimeUnit;
 
 /**
  * 奖品仓储类
  */
 
 @Slf4j
-@Repository
+@Component
 public class AwardRepository implements IAwardRepository {
 
     @Resource
@@ -49,6 +53,8 @@ public class AwardRepository implements IAwardRepository {
     private TransactionTemplate transactionTemplate;
     @Resource
     private EventPublisher eventPublisher;
+    @Resource
+    private IRedisService redisService;
 
     @Override
     public void saveUserAwardRecord(UserAwardRecordAggregate userAwardRecordAggregate) {
@@ -80,7 +86,6 @@ public class AwardRepository implements IAwardRepository {
         userRaffleOrderReq.setUserId(userAwardRecordEntity.getUserId());
         userRaffleOrderReq.setOrderId(userAwardRecordEntity.getOrderId());
 
-
         try {
             dbRouter.doRouter(userId);
             transactionTemplate.execute(status -> {
@@ -91,7 +96,7 @@ public class AwardRepository implements IAwardRepository {
                     taskDao.insert(task);
                     // 更新抽奖单
                     int count = userRaffleOrderDao.updateUserRaffleOrderStateUsed(userRaffleOrderReq);
-                    if (count != 1) {
+                    if (1 != count) {
                         status.setRollbackOnly();
                         log.error("写入中奖记录，用户抽奖单已使用过，不可重复抽奖 userId: {} activityId: {} awardId: {}", userId, activityId, awardId);
                         throw new AppException(ResponseCode.ACTIVITY_ORDER_ERROR.getCode(), ResponseCode.ACTIVITY_ORDER_ERROR.getInfo());
@@ -112,6 +117,7 @@ public class AwardRepository implements IAwardRepository {
             eventPublisher.publish(task.getTopic(), task.getMessage());
             // 更新数据库记录，task 任务表
             taskDao.updateTaskSendMessageCompleted(task);
+            log.info("写入中奖记录，发送MQ消息完成 userId: {} orderId:{} topic: {}", userId, userAwardRecordEntity.getOrderId(), task.getTopic());
         } catch (Exception e) {
             log.error("写入中奖记录，发送MQ消息失败 userId: {} topic: {}", userId, task.getTopic());
             taskDao.updateTaskSendMessageFail(task);
@@ -136,23 +142,27 @@ public class AwardRepository implements IAwardRepository {
         userAwardRecordReq.setOrderId(userAwardRecordEntity.getOrderId());
         userAwardRecordReq.setAwardState(userAwardRecordEntity.getAwardState().getCode());
 
-        // 更新用户积分
+        // 更新用户积分 「首次则插入数据」
         UserCreditAccount userCreditAccountReq = new UserCreditAccount();
         userCreditAccountReq.setUserId(userCreditAwardEntity.getUserId());
         userCreditAccountReq.setTotalAmount(userCreditAwardEntity.getCreditAmount());
         userCreditAccountReq.setAvailableAmount(userCreditAwardEntity.getCreditAmount());
         userCreditAccountReq.setAccountStatus(AccountStatusVO.open.getCode());
 
-        try{
+        RLock lock = redisService.getLock(Constants.RedisKey.ACTIVITY_ACCOUNT_LOCK + userId);
+        try {
+            lock.lock(3, TimeUnit.SECONDS);
             dbRouter.doRouter(giveOutPrizesAggregate.getUserId());
             transactionTemplate.execute(status -> {
                 try {
                     // 更新积分 || 创建积分账户
-                    int updateAccountCount = userCreditAccountDao.updateAddAmount(userCreditAccountReq);
-                    if (updateAccountCount == 0) {
+                    UserCreditAccount userCreditAccountRes = userCreditAccountDao.queryUserCreditAccount(userCreditAccountReq);
+                    if (null == userCreditAccountRes) {
                         userCreditAccountDao.insert(userCreditAccountReq);
+                    } else {
+                        userCreditAccountDao.updateAddAmount(userCreditAccountReq);
                     }
-                    
+
                     // 更新奖品记录
                     int updateAwardCount = userAwardRecordDao.updateAwardRecordCompletedState(userAwardRecordReq);
                     if (0 == updateAwardCount) {
@@ -168,6 +178,7 @@ public class AwardRepository implements IAwardRepository {
             });
         } finally {
             dbRouter.clear();
+            lock.unlock();
         }
     }
 

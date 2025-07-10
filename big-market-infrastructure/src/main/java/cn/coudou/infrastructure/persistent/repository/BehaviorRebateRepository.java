@@ -19,6 +19,7 @@ import cn.coudou.types.exception.AppException;
 import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.DuplicateKeyException;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.support.TransactionTemplate;
 
@@ -31,7 +32,7 @@ import java.util.List;
  */
 
 @Slf4j
-@Repository
+@Component
 public class BehaviorRebateRepository implements IBehaviorRebateRepository {
 
     @Resource
@@ -96,7 +97,7 @@ public class BehaviorRebateRepository implements IBehaviorRebateRepository {
                 } catch (DuplicateKeyException e) {
                     status.setRollbackOnly();
                     log.error("写入返利记录，唯一索引冲突 userId: {}", userId, e);
-                    throw new AppException(ResponseCode.INDEX_DUP.getCode(), e);
+                    throw new AppException(ResponseCode.INDEX_DUP.getCode(), ResponseCode.INDEX_DUP.getInfo());
                 }
             });
         } finally {
@@ -109,11 +110,10 @@ public class BehaviorRebateRepository implements IBehaviorRebateRepository {
             Task task = new Task();
             task.setUserId(taskEntity.getUserId());
             task.setMessageId(taskEntity.getMessageId());
-
             try {
                 // 发送消息【在事务外执行，如果失败还有任务补偿】
                 eventPublisher.publish(taskEntity.getTopic(), taskEntity.getMessage());
-                // 更新数据库记录
+                // 更新数据库记录，task 任务表
                 taskDao.updateTaskSendMessageCompleted(task);
             } catch (Exception e) {
                 log.error("写入返利记录，发送MQ消息失败 userId: {} topic: {}", userId, task.getTopic());
@@ -125,12 +125,11 @@ public class BehaviorRebateRepository implements IBehaviorRebateRepository {
 
     @Override
     public List<BehaviorRebateOrderEntity> queryOrderByOutBusinessNo(String userId, String outBusinessNo) {
-        // 请求对象
+        // 1. 请求对象
         UserBehaviorRebateOrder userBehaviorRebateOrderReq = new UserBehaviorRebateOrder();
         userBehaviorRebateOrderReq.setUserId(userId);
         userBehaviorRebateOrderReq.setOutBusinessNo(outBusinessNo);
-
-        // 查询结果
+        // 2. 查询结果
         List<UserBehaviorRebateOrder> userBehaviorRebateOrderResList = userBehaviorRebateOrderDao.queryOrderByOutBusinessNo(userBehaviorRebateOrderReq);
         List<BehaviorRebateOrderEntity> behaviorRebateOrderEntities = new ArrayList<>(userBehaviorRebateOrderResList.size());
         for (UserBehaviorRebateOrder userBehaviorRebateOrder : userBehaviorRebateOrderResList) {
@@ -148,4 +147,5 @@ public class BehaviorRebateRepository implements IBehaviorRebateRepository {
         }
         return behaviorRebateOrderEntities;
     }
+
 }
