@@ -2,6 +2,7 @@ package cn.coudou.trigger.listener;
 
 
 import cn.coudou.domain.activity.model.entity.SkuRechargeEntity;
+import cn.coudou.domain.activity.model.valobj.OrderTradeTypeVO;
 import cn.coudou.domain.activity.service.IRaffleActivityAccountQuotaService;
 import cn.coudou.domain.credit.model.entity.TradeEntity;
 import cn.coudou.domain.credit.model.valobj.TradeNameVO;
@@ -53,6 +54,7 @@ public class RebateMessageCustomer {
                     skuRechargeEntity.setUserId(rebateMessage.getUserId());
                     skuRechargeEntity.setSku(Long.valueOf(rebateMessage.getRebateConfig()));
                     skuRechargeEntity.setOutBusinessNo(rebateMessage.getBizId());
+                    skuRechargeEntity.setOrderTradeType(OrderTradeTypeVO.rebate_no_pay_trade);
                     raffleActivityAccountQuotaService.createOrder(skuRechargeEntity);
                     break;
                 case "integral":
