@@ -3,6 +3,7 @@ package cn.coudou.domain.activity.service;
 import cn.coudou.domain.activity.model.entity.ActivityAccountEntity;
 import cn.coudou.domain.activity.model.entity.DeliveryOrderEntity;
 import cn.coudou.domain.activity.model.entity.SkuRechargeEntity;
+import cn.coudou.domain.activity.model.entity.UnpaidActivityOrderEntity;
 
 /**
  * 抽奖活动订单接口
@@ -15,7 +16,7 @@ public interface IRaffleActivityAccountQuotaService {
      * @param skuRechargeEntity
      * @return
      */
-    String createOrder(SkuRechargeEntity skuRechargeEntity);
+    UnpaidActivityOrderEntity createOrder(SkuRechargeEntity skuRechargeEntity);
 
     /**
      * 订单出货 - 积分充值

@@ -3,7 +3,6 @@ package cn.coudou.domain.activity.service.quota;
 import cn.coudou.domain.activity.model.aggregate.CreateQuotaOrderAggregate;
 import cn.coudou.domain.activity.model.entity.*;
 import cn.coudou.domain.activity.model.valobj.ActivitySkuStockKeyVO;
-import cn.coudou.domain.activity.model.valobj.OrderStateVO;
 import cn.coudou.domain.activity.repository.IActivityRepository;
 import cn.coudou.domain.activity.service.IRaffleActivitySkuStockService;
 import cn.coudou.domain.activity.service.quota.policy.ITradePolicy;
@@ -18,7 +17,7 @@ import java.util.Map;
  * 抽奖活动服务
  */
 @Service
-public class RaffleActivityAccountQuotaService extends AbstractRaffleActivityAccountQuotaAccountQuota implements IRaffleActivitySkuStockService {
+public class RaffleActivityAccountQuotaService extends AbstractRaffleActivityAccountQuota implements IRaffleActivitySkuStockService {
 
     public RaffleActivityAccountQuotaService(IActivityRepository activityRepository, DefaultActivityChainFactory defaultActivityChainFactory, Map<String, ITradePolicy> tradePolicyGroup) {
         super(activityRepository, defaultActivityChainFactory, tradePolicyGroup);

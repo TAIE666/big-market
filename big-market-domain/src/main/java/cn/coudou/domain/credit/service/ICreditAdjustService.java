@@ -1,5 +1,6 @@
 package cn.coudou.domain.credit.service;
 
+import cn.coudou.domain.credit.model.entity.CreditAccountEntity;
 import cn.coudou.domain.credit.model.entity.TradeEntity;
 
 /**
@@ -9,4 +10,6 @@ import cn.coudou.domain.credit.model.entity.TradeEntity;
 public interface ICreditAdjustService {
 
     String createOrder(TradeEntity tradeEntity);
+
+    CreditAccountEntity queryUserCreditAccount(String userId);
 }
