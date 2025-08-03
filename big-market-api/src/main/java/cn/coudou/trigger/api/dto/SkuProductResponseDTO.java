@@ -2,6 +2,7 @@ package cn.coudou.trigger.api.dto;
 
 import lombok.Data;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 @Data
@@ -38,7 +39,7 @@ public class SkuProductResponseDTO {
     private ActivityCount activityCount;
 
     @Data
-    public static class ActivityCount {
+    public static class ActivityCount implements Serializable {
         /**
          * 总次数
          */

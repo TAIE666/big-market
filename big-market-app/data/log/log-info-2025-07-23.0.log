@@ -1,0 +1,272 @@
+25-07-14.21:08:26.628 [main            ] INFO  RaffleActivityControllerTest - Starting RaffleActivityControllerTest using Java 1.8.0_391 on LAPTOP-RN9B7MCO with PID 6452 (started by 11140 in E:\java\Project\big-market\big-market-app)
+25-07-14.21:08:26.630 [main            ] INFO  RaffleActivityControllerTest - The following 1 profile is active: "dev"
+25-07-14.21:08:29.776 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-14.21:08:29.781 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-14.21:08:29.893 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 87 ms. Found 0 Redis repository interfaces.
+25-07-14.21:08:32.844 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-14.21:08:33.838 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-07-14.21:08:33.855 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-07-14.21:08:36.153 [main            ] WARN  GenericWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'raffleActivityController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.coudou.domain.activity.service.IRaffleActivitySkuProductService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+25-07-14.21:08:36.259 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+25-07-14.21:08:36.297 [main            ] ERROR LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean of type 'cn.coudou.domain.activity.service.IRaffleActivitySkuProductService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'cn.coudou.domain.activity.service.IRaffleActivitySkuProductService' in your configuration.
+
+25-07-14.21:08:36.301 [main            ] ERROR TestContextManager     - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@f79e] to prepare test instance [cn.coudou.test.trigger.RaffleActivityControllerTest@2c7ad4f3]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:248)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'raffleActivityController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.coudou.domain.activity.service.IRaffleActivitySkuProductService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:136)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:141)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:90)
+	... 27 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.coudou.domain.activity.service.IRaffleActivitySkuProductService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1801)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1357)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:544)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
+	... 43 common frames omitted
+25-07-14.21:11:08.753 [main            ] INFO  RaffleActivityControllerTest - Starting RaffleActivityControllerTest using Java 1.8.0_391 on LAPTOP-RN9B7MCO with PID 9200 (started by 11140 in E:\java\Project\big-market\big-market-app)
+25-07-14.21:11:08.754 [main            ] INFO  RaffleActivityControllerTest - The following 1 profile is active: "dev"
+25-07-14.21:11:10.162 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-14.21:11:10.167 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-14.21:11:10.273 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 89 ms. Found 0 Redis repository interfaces.
+25-07-14.21:11:12.666 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-14.21:11:13.579 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-07-14.21:11:13.597 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-07-14.21:11:18.151 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-14.21:11:18.280 [main            ] INFO  CachingConnectionFactory - Attempting to connect to: [192.168.48.128:5672]
+25-07-14.21:11:18.385 [main            ] INFO  CachingConnectionFactory - Created new connection: rabbitConnectionFactory#350bbd5d:0/SimpleConnection@be083e1 [delegate=amqp://admin@192.168.48.128:5672/, localPort= 10578]
+25-07-14.21:11:18.496 [main            ] INFO  RaffleActivityControllerTest - Started RaffleActivityControllerTest in 10.226 seconds (JVM running for 11.556)
+25-07-14.21:11:18.879 [main            ] INFO  RaffleActivityController - 查询sku商品集合开始 activityId:100301
+25-07-14.21:11:18.932 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+25-07-14.21:11:19.380 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+25-07-14.21:11:19.687 [main            ] INFO  RaffleActivityController - 查询sku商品集合完成 activityId:100301 skuProductResponseDTOS:[{"activityCount":{"dayCount":100,"monthCount":100,"totalCount":100},"activityCountId":11101,"productAmount":1.68,"sku":9011,"stockCount":100000,"stockCountSurplus":99874}]
+25-07-14.21:11:19.690 [main            ] INFO  RaffleActivityControllerTest - 请求参数：100301
+25-07-14.21:11:19.695 [main            ] INFO  RaffleActivityControllerTest - 测试结果：{"code":"0000","data":[{"activityCount":{"dayCount":100,"monthCount":100,"totalCount":100},"activityCountId":11101,"productAmount":1.68,"sku":9011,"stockCount":100000,"stockCountSurplus":99874}],"info":"调用成功"}
+25-07-14.21:11:19.714 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+25-07-14.21:11:19.719 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+25-07-14.21:11:19.721 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+25-07-14.21:11:19.723 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+25-07-14.21:11:20.011 [scheduling-1    ] INFO  UpdateActivitySkuStockJob - 定时任务，更新活动sku库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-07-14.21:11:20.030 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-07-14.21:11:20.045 [pool-3-thread-2 ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+25-07-14.21:11:20.045 [pool-3-thread-1 ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+25-07-14.21:11:20.066 [pool-3-thread-2 ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+25-07-14.21:11:20.066 [pool-3-thread-1 ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+25-07-14.21:11:20.462 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+25-07-14.21:11:20.462 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+25-07-14.21:11:20.474 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+25-07-14.21:11:20.475 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+25-07-14.21:11:20.478 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+25-07-14.21:11:20.479 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+25-07-14.21:11:20.479 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+25-07-14.21:11:20.479 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+25-07-14.21:11:44.501 [main            ] INFO  RaffleActivityControllerTest - Starting RaffleActivityControllerTest using Java 1.8.0_391 on LAPTOP-RN9B7MCO with PID 12900 (started by 11140 in E:\java\Project\big-market\big-market-app)
+25-07-14.21:11:44.502 [main            ] INFO  RaffleActivityControllerTest - The following 1 profile is active: "dev"
+25-07-14.21:11:45.860 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-14.21:11:45.864 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-14.21:11:45.957 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 75 ms. Found 0 Redis repository interfaces.
+25-07-14.21:11:48.338 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-14.21:11:49.240 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-07-14.21:11:49.256 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-07-14.21:11:54.411 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-14.21:11:54.519 [main            ] INFO  CachingConnectionFactory - Attempting to connect to: [192.168.48.128:5672]
+25-07-14.21:11:54.598 [main            ] INFO  CachingConnectionFactory - Created new connection: rabbitConnectionFactory#350bbd5d:0/SimpleConnection@4e3ffd0 [delegate=amqp://admin@192.168.48.128:5672/, localPort= 10755]
+25-07-14.21:11:54.795 [main            ] INFO  RaffleActivityControllerTest - Started RaffleActivityControllerTest in 10.718 seconds (JVM running for 12.158)
+25-07-14.21:11:55.005 [scheduling-1    ] INFO  UpdateActivitySkuStockJob - 定时任务，更新活动sku库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-07-14.21:11:55.062 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-07-14.21:11:55.120 [pool-3-thread-2 ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+25-07-14.21:11:55.120 [pool-3-thread-1 ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+25-07-14.21:11:55.303 [main            ] INFO  RaffleActivityController - 查询用户积分值开始 userId:coudou
+25-07-14.21:11:55.711 [pool-3-thread-1 ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+25-07-14.21:11:55.712 [pool-3-thread-2 ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+25-07-14.21:11:55.802 [main            ] INFO  RaffleActivityController - 查询用户积分值完成 userId:coudou adjustAmount:999.92
+25-07-14.21:11:56.251 [main            ] INFO  RaffleActivityControllerTest - 请求参数："coudou"
+25-07-14.21:11:56.277 [main            ] INFO  RaffleActivityControllerTest - 测试结果：{"code":"0000","data":999.92,"info":"调用成功"}
+25-07-14.21:11:56.306 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+25-07-14.21:11:56.307 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+25-07-14.21:11:56.309 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+25-07-14.21:11:56.311 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+25-07-14.21:11:56.732 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+25-07-14.21:11:56.747 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+25-07-14.21:11:56.746 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+25-07-14.21:11:56.776 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+25-07-14.21:11:56.779 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+25-07-14.21:11:56.779 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+25-07-14.21:11:56.779 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+25-07-14.21:11:56.779 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+25-07-14.21:12:20.930 [main            ] INFO  RaffleActivityControllerTest - Starting RaffleActivityControllerTest using Java 1.8.0_391 on LAPTOP-RN9B7MCO with PID 2148 (started by 11140 in E:\java\Project\big-market\big-market-app)
+25-07-14.21:12:20.931 [main            ] INFO  RaffleActivityControllerTest - The following 1 profile is active: "dev"
+25-07-14.21:12:22.487 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-14.21:12:22.494 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-14.21:12:22.615 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 97 ms. Found 0 Redis repository interfaces.
+25-07-14.21:12:25.332 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-14.21:12:26.267 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-07-14.21:12:26.283 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-07-14.21:12:31.413 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-14.21:12:31.525 [main            ] INFO  CachingConnectionFactory - Attempting to connect to: [192.168.48.128:5672]
+25-07-14.21:12:31.632 [main            ] INFO  CachingConnectionFactory - Created new connection: rabbitConnectionFactory#350bbd5d:0/SimpleConnection@be083e1 [delegate=amqp://admin@192.168.48.128:5672/, localPort= 10927]
+25-07-14.21:12:31.748 [main            ] INFO  RaffleActivityControllerTest - Started RaffleActivityControllerTest in 11.35 seconds (JVM running for 12.852)
+25-07-14.21:12:32.078 [main            ] INFO  RaffleActivityController - 积分兑换商品开始 userId:coudou sku:9011
+25-07-14.21:12:32.136 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+25-07-14.21:12:32.445 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+25-07-14.21:12:32.482 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+25-07-14.21:12:32.506 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+25-07-14.21:12:32.595 [main            ] INFO  ActivityBaseActionChain - 活动责任链-基础信息【有效期、状态】校验开始。
+25-07-14.21:12:32.596 [main            ] INFO  ActivitySkuStockActionChain - 活动责任链-商品库存处理【有效期、状态、库存(sku)】开始。sku:9011 activityId:100301
+25-07-14.21:12:32.602 [main            ] INFO  ActivitySkuStockActionChain - 活动责任链-商品库存处理【有效期、状态、库存(sku)】成功。sku:9011 activityId:100301
+25-07-14.21:12:32.732 [main            ] INFO  RaffleActivityController - 积分兑换商品，创建订单完成 userId:coudou sku:9011 outBusinessNo:201709052781
+25-07-14.21:12:32.737 [main            ] INFO  CreditAdjustService    - 账户积分额度开始 userId:coudou tradeName:CONVERT_SKU amount:-1.68
+25-07-14.21:12:33.130 [main            ] INFO  EventPublisher         - 发送MQ消息 topic:credit_adjust_success message:{"data":{"amount":-1.68,"orderId":"588027556999","outBusinessNo":"201709052781","userId":"coudou"},"id":"35108956090","timestamp":1752498752742}
+25-07-14.21:12:33.135 [main            ] INFO  CreditRepository       - 调整账户积分记录，发送MQ消息完成 userId: coudou orderId:588027556999 topic: credit_adjust_success
+25-07-14.21:12:33.135 [main            ] INFO  CreditAdjustService    - 账户积分额度完成 userId:coudou orderId:588027556999
+25-07-14.21:12:33.135 [main            ] INFO  RaffleActivityController - 积分兑换商品，支付订单完成  userId:coudou sku:9011 orderId:588027556999
+25-07-14.21:12:33.141 [main            ] INFO  RaffleActivityControllerTest - 请求参数：{"sku":9011,"userId":"coudou"}
+25-07-14.21:12:33.142 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1] INFO  CreditAdjustSuccessCustomer - 监听积分账户调整成功消息，进行交易商品发货 topic: credit_adjust_success message: {"data":{"amount":-1.68,"orderId":"588027556999","outBusinessNo":"201709052781","userId":"coudou"},"id":"35108956090","timestamp":1752498752742}
+25-07-14.21:12:33.146 [main            ] INFO  RaffleActivityControllerTest - 测试结果：{"code":"0000","data":true,"info":"调用成功"}
+25-07-14.21:12:35.013 [scheduling-1    ] INFO  UpdateActivitySkuStockJob - 定时任务，更新活动sku库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-07-14.21:12:35.016 [scheduling-1    ] INFO  UpdateActivitySkuStockJob - 定时任务，更新活动sku库存 sku:9011 activityId:100301
+25-07-14.21:12:35.020 [pool-3-thread-2 ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+25-07-14.21:12:35.024 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-07-14.21:12:35.040 [pool-3-thread-2 ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+25-07-14.21:12:40.003 [scheduling-1    ] INFO  UpdateActivitySkuStockJob - 定时任务，更新活动sku库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-07-14.21:12:40.005 [scheduling-1    ] INFO  UpdateActivitySkuStockJob - 定时任务，更新活动sku库存 sku:9011 activityId:100301
+25-07-14.21:12:40.011 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-07-14.21:12:45.006 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-07-14.21:12:45.007 [scheduling-1    ] INFO  UpdateActivitySkuStockJob - 定时任务，更新活动sku库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-07-14.21:12:50.012 [scheduling-1    ] INFO  UpdateActivitySkuStockJob - 定时任务，更新活动sku库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-07-14.21:12:50.014 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-07-14.21:12:55.011 [scheduling-1    ] INFO  UpdateActivitySkuStockJob - 定时任务，更新活动sku库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-07-14.21:12:55.013 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-07-14.21:13:00.002 [scheduling-1    ] INFO  UpdateActivitySkuStockJob - 定时任务，更新活动sku库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-07-14.21:13:00.004 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-07-14.21:13:05.016 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-07-14.21:13:05.017 [scheduling-1    ] INFO  UpdateActivitySkuStockJob - 定时任务，更新活动sku库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-07-14.21:13:10.001 [scheduling-1    ] INFO  UpdateActivitySkuStockJob - 定时任务，更新活动sku库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-07-14.21:13:10.002 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-07-14.21:13:15.008 [scheduling-1    ] INFO  UpdateActivitySkuStockJob - 定时任务，更新活动sku库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-07-14.21:13:15.010 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-07-14.21:13:20.006 [scheduling-1    ] INFO  UpdateActivitySkuStockJob - 定时任务，更新活动sku库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-07-14.21:13:20.008 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-07-14.21:13:25.010 [scheduling-1    ] INFO  UpdateActivitySkuStockJob - 定时任务，更新活动sku库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-07-14.21:13:25.013 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-07-14.21:13:25.756 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+25-07-14.21:13:25.758 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+25-07-14.21:13:25.760 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+25-07-14.21:13:25.761 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+25-07-14.21:13:26.031 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+25-07-14.21:13:26.031 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+25-07-14.21:13:26.031 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+25-07-14.21:13:26.507 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+25-07-14.21:13:26.511 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+25-07-14.21:13:26.512 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+25-07-14.21:13:26.512 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+25-07-14.21:13:26.512 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+25-07-14.21:13:31.372 [main            ] INFO  RaffleActivityControllerTest - Starting RaffleActivityControllerTest using Java 1.8.0_391 on LAPTOP-RN9B7MCO with PID 19828 (started by 11140 in E:\java\Project\big-market\big-market-app)
+25-07-14.21:13:31.373 [main            ] INFO  RaffleActivityControllerTest - The following 1 profile is active: "dev"
+25-07-14.21:13:32.699 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-14.21:13:32.705 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-14.21:13:32.823 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 97 ms. Found 0 Redis repository interfaces.
+25-07-14.21:13:35.214 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-14.21:13:36.349 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-07-14.21:13:36.391 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 192.168.48.128/192.168.48.128:16379
+25-07-14.21:13:43.432 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-14.21:13:43.603 [main            ] INFO  CachingConnectionFactory - Attempting to connect to: [192.168.48.128:5672]
+25-07-14.21:13:43.723 [main            ] INFO  CachingConnectionFactory - Created new connection: rabbitConnectionFactory#350bbd5d:0/SimpleConnection@be083e1 [delegate=amqp://admin@192.168.48.128:5672/, localPort= 11099]
+25-07-14.21:13:43.852 [main            ] INFO  RaffleActivityControllerTest - Started RaffleActivityControllerTest in 12.933 seconds (JVM running for 14.373)
+25-07-14.21:13:44.166 [main            ] INFO  RaffleActivityController - 积分兑换商品开始 userId:coudou sku:9011
+25-07-14.21:13:44.218 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+25-07-14.21:13:44.551 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+25-07-14.21:13:44.584 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+25-07-14.21:13:44.611 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+25-07-14.21:13:44.687 [main            ] INFO  ActivityBaseActionChain - 活动责任链-基础信息【有效期、状态】校验开始。
+25-07-14.21:13:44.687 [main            ] INFO  ActivitySkuStockActionChain - 活动责任链-商品库存处理【有效期、状态、库存(sku)】开始。sku:9011 activityId:100301
+25-07-14.21:13:44.692 [main            ] INFO  ActivitySkuStockActionChain - 活动责任链-商品库存处理【有效期、状态、库存(sku)】成功。sku:9011 activityId:100301
+25-07-14.21:13:44.767 [main            ] INFO  RaffleActivityController - 积分兑换商品，创建订单完成 userId:coudou sku:9011 outBusinessNo:397498586798
+25-07-14.21:13:44.771 [main            ] INFO  CreditAdjustService    - 账户积分额度开始 userId:coudou tradeName:CONVERT_SKU amount:-1.68
+25-07-14.21:13:45.004 [scheduling-1    ] INFO  UpdateActivitySkuStockJob - 定时任务，更新活动sku库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-07-14.21:13:45.008 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-07-14.21:13:45.032 [pool-3-thread-2 ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+25-07-14.21:13:45.056 [pool-3-thread-2 ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+25-07-14.21:13:45.156 [main            ] INFO  EventPublisher         - 发送MQ消息 topic:credit_adjust_success message:{"data":{"amount":-1.68,"orderId":"757195730984","outBusinessNo":"397498586798","userId":"coudou"},"id":"98137330532","timestamp":1752498824775}
+25-07-14.21:13:45.161 [main            ] INFO  CreditRepository       - 调整账户积分记录，发送MQ消息完成 userId: coudou orderId:757195730984 topic: credit_adjust_success
+25-07-14.21:13:45.162 [main            ] INFO  CreditAdjustService    - 账户积分额度完成 userId:coudou orderId:757195730984
+25-07-14.21:13:45.162 [main            ] INFO  RaffleActivityController - 积分兑换商品，支付订单完成  userId:coudou sku:9011 orderId:757195730984
+25-07-14.21:13:45.168 [main            ] INFO  RaffleActivityControllerTest - 请求参数：{"sku":9011,"userId":"coudou"}
+25-07-14.21:13:45.170 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1] INFO  CreditAdjustSuccessCustomer - 监听积分账户调整成功消息，进行交易商品发货 topic: credit_adjust_success message: {"data":{"amount":-1.68,"orderId":"757195730984","outBusinessNo":"397498586798","userId":"coudou"},"id":"98137330532","timestamp":1752498824775}
+25-07-14.21:13:45.172 [main            ] INFO  RaffleActivityControllerTest - 测试结果：{"code":"0000","data":true,"info":"调用成功"}
+25-07-14.21:13:50.006 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-07-14.21:13:50.008 [scheduling-1    ] INFO  UpdateActivitySkuStockJob - 定时任务，更新活动sku库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-07-14.21:13:50.011 [scheduling-1    ] INFO  UpdateActivitySkuStockJob - 定时任务，更新活动sku库存 sku:9011 activityId:100301
+25-07-14.21:13:52.486 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+25-07-14.21:13:52.487 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+25-07-14.21:13:52.488 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+25-07-14.21:13:52.489 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+25-07-14.21:13:52.840 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+25-07-14.21:13:52.853 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+25-07-14.21:13:52.868 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+25-07-14.21:13:53.272 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+25-07-14.21:13:53.275 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+25-07-14.21:13:53.276 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+25-07-14.21:13:53.276 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+25-07-14.21:13:53.276 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped

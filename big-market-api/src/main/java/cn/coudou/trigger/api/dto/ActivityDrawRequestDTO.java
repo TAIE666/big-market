@@ -2,11 +2,13 @@ package cn.coudou.trigger.api.dto;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * 活动抽奖请求对象
  */
 @Data
-public class ActivityDrawRequestDTO {
+public class ActivityDrawRequestDTO implements Serializable {
 
     /**
      * 用户ID
